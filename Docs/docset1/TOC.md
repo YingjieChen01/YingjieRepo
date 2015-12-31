@@ -4,3 +4,6 @@
 ## [topic3](topic3.md)
 # [topic4](topic4.md)
 ## [topic5](topic5.md)
+## [topic6](topic6.md)
+## [topic7](topic7.md)
+## [topic9](topic9.md)
