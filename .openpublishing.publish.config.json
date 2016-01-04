@@ -3,15 +3,27 @@
     "git_repository_url_open_to_public_contributors": "",
     "docsets_to_publish": [
         {
-            "docset_name": "docset1",
-            "build_output_subfolder": "docset1",
+            "docset_name": "Docset1",
+            "build_output_subfolder": "Docs/Docset1",
             "locale": "en-us",
             "version": 0,
-            "open_to_public_contributors": "true",
+            "open_to_public_contributors": "false",
+            "type_mapping": {
+                "Conceptual": "Content"
+            }
+        },
+                {
+            "docset_name": "Docset2",
+            "build_output_subfolder": "Docs/Docset1",
+            "locale": "en-us",
+            "version": 0,
+            "open_to_public_contributors": "false",
             "type_mapping": {
                 "Conceptual": "Content"
             }
         }
+        
+        
     ],
     "notification_subscribers": ["v-yichen@microsoft.com"],
     "branches_to_filter": ["live"]
