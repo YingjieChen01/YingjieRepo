@@ -13,7 +13,11 @@
             }
         },
         {
+<<<<<<< HEAD
             "docset_name": "Docset1",
+=======
+            "docset_name": "docset2",
+>>>>>>> origin/Live
             "build_output_subfolder": "Docs/Docset2",
             "locale": "en-us",
             "version": 0,
