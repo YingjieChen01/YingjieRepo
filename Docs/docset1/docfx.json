@@ -19,6 +19,6 @@
     "externalReference": [
     ],
     "template": "op.html",
-    "dest": "Docset1"
+    "dest": "Docs/Docset1"
   }
 }
