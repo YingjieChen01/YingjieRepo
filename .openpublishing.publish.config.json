@@ -13,7 +13,7 @@
             }
         },
         {
-            "docset_name": "Docset1",
+            "docset_name": "Docset2",
             "build_output_subfolder": "Docs/Docset2",
             "locale": "en-us",
             "version": 0,
