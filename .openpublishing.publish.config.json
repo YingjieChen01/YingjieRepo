@@ -12,7 +12,7 @@
                 "Conceptual": "Content"
             }
         },
-                {
+        {
             "docset_name": "docset2",
             "build_output_subfolder": "Docs/Docset2",
             "locale": "en-us",
