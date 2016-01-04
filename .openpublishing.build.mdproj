@@ -84,7 +84,7 @@
   <Target DependsOnTargets="Build" Name="Generate">
     <MSBuild Projects="$(BuildProjectPath)" Targets="DocPreview" Properties="DocfxConfigFile=%(DocfxConfigFile.FullPath);OutputFolder=$(OutputFolder);IsServing=False;DocTemplate=$(PreviewTemplateName);LogFile=$(LogFile);LogLevel=$(LogLevel)"/>
   </Target>
-  <Target DependsOnTargets="Generate" Name="Serve">
+  <Target DependsOnTargets="Rebuild" Name="Serve">
     <Message Text="$(BuildProjectPath)" />
     <MSBuild Projects="$(BuildProjectPath)" Targets="DocServe" Properties="DocfxConfigFile=%(DocfxConfigFile.FullPath);OutputFolder=$(OutputFolder);IsServing=True;DocTemplate=$(PreviewTemplateName);LogFile=$(LogFile);LogLevel=$(LogLevel)"/>
   </Target>

@@ -2,13 +2,14 @@
 
 <div>Hello World</div>
 <br/>
-<h1>HEHE</h1>
-<h2>HEHE</h2>
-<h3>HEHE</h3>
-<h4>HEHE</h4>
-<h5>HEHE</h5>
-<h6>HEHE</h6>
-<h7>HEHE</h7>
+<h1>Head1</h1>
+<h2>Head2</h2>
+<h3>Head3</h3>
+<h4>Head4</h4>
+<h5>Head5</h5>
+<h6>Head6</h6>
+<h7>Head7</h7>
+<br/>
 <sapn>span</sapn>
 <table>
 <tr>
@@ -32,7 +33,7 @@
 <hr/>
 </table>
 
-<a href="www.baidu.com">baidu</a>
+<a href="http://www.baidu.com">baidu</a>
 <p>ttt</p>
 
 </html>
