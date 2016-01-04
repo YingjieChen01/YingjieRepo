@@ -4,7 +4,7 @@
     "docsets_to_publish": [
         {
             "docset_name": "docset1",
-            "build_output_subfolder": "Docset1",
+            "build_output_subfolder": "Docs/Docset1",
             "locale": "en-us",
             "version": 0,
             "open_to_public_contributors": "false",
@@ -14,7 +14,7 @@
         },
                 {
             "docset_name": "docset2",
-            "build_output_subfolder": "Docset1",
+            "build_output_subfolder": "Docs/Docset2",
             "locale": "en-us",
             "version": 0,
             "open_to_public_contributors": "false",
