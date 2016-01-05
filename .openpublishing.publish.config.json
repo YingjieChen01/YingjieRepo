@@ -21,6 +21,16 @@
             "type_mapping": {
                 "Conceptual": "Content"
             }
+        },
+        {
+            "docset_name": "SmokeTesting",
+            "build_output_subfolder": "Docs/SmokeTesting",
+            "locale": "en-us",
+            "version": 0,
+            "open_to_public_contributors": "false",
+            "type_mapping": {
+                "Conceptual": "Content"
+            }
         }
     ],
     "notification_subscribers": ["v-yichen@microsoft.com"],
