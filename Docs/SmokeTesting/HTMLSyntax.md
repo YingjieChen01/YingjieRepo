@@ -39,7 +39,7 @@
 <h3>*********a*********</h3><br />
 <a href="http://www.baidu.com">链接</a><br />
 <h3>*********img*********</h3><br />
-<img src="../cc/img.jpg" /><br />
+<img src="Images/Koala.jpg" /><br />
 <h3>*********hr*********</h3><br />
 <hr /><br />
 <h3>*********ol-li*********</h3><br />
@@ -55,8 +55,8 @@
    <li>ul-li-3</li>
 </ul>
 <h3>*********input*********</h3><br />
-<input type="button" value="I‘am Button" /><br /><br />
-<input type="text" value="I‘am Text" /><br />
+<input type="button" value="I'am Button" /><br /><br />
+<input type="text" value="I'am Text" /><br />
 
 <h3>*********dl-dt*********</h3><br />
 <dl>
@@ -79,7 +79,7 @@ a dozen is <del>20</del> 12 pieces<br />
 <span> span </span><br />
 
 <h3>*********video*********</h3><br />
-<video src="movie.ogg" controls="controls">
+<video src="https://sec.ch9.ms/ch9/4ce4/817a99cc-24da-4689-83a8-bd5aa1c54ce4/VSToolboxContainers_high.mp4" controls="controls">
 您的浏览器不支持 video 标签。
 </video><br />
 <h3>*********wbr*********</h3><br />
