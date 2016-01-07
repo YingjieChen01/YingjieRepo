@@ -29,9 +29,9 @@ Todo
 You do not have to create anchors anymore - they are automatically generated at publishing time for all H2 headings. The only thing you have to do is create links to the H2 sections
 the-text-of-the-H2-section-separated-by-hyphens
 
-[Go to Bookmark1 node](# Node-of-Bookmark1)
+[Go to Bookmark1 node](#Node-of-Bookmark1)
 
-[Go to Bookmark which anchor of H3 ](# Node-of-Bookmark-with-H3)
+[Go to Bookmark which anchor of H3 ](#Node-of-Bookmark-with-H3)
 
 [Go to Bookmark node in topic MarkDownSyntax](MarkDownSyntax.md#BookMark-Node-End2)
 
@@ -63,7 +63,9 @@ Values for type_of_api_call:
     httprequest
     REST
     REST-i
-    
+ 
+ 
+***  
 ```httprequest\n[!INCLUDE[test](relative_path)]\n```
 
 ## Insert API – Swagger
@@ -73,6 +75,7 @@ Values for type_of_api_call:
     "operation":    "get events"
 }
 ``` 
+
 
 RESTAPIdocs
 {
