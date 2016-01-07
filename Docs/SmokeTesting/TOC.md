@@ -4,4 +4,5 @@
 ## [MarkDownSyntax2](MarkDownSyntax2.md)
 # [AzureSyntax](AzureSyntax.md)  
 # [HTMLSyntax](HTMLSyntax.md)  
-# [HTMLandMDSyntax](HTMLandMDSyntax.md)  
+# [HTMLandMDSyntax](HTMLandMDSyntax.md)
+# [MarkdownExtension](MarkdownExtension.md)

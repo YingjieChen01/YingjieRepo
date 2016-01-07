@@ -8,9 +8,9 @@
 ######## Heading8
 
 # Bookmark
-[Go to Bookmark node End](# BookMark Node End)
-[Go to Bookmark node End1](# BookMark Node End1)
-[Go to Bookmark node End2](# BookMark Node End2)
+[Go to Bookmark node End](# BookMark-Node-End)
+[Go to Bookmark node End1](# BookMark-Node-End1)
+[Go to Bookmark node End2](# BookMark-Node-End2)
 
 # Lists
 * ListItem1 with "\*" tag
