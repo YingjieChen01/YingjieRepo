@@ -87,9 +87,6 @@ RESTAPIdocs
 
 
 ## Reference a Swagger file (end of .md file)
-```RESTAPI_Swagger
-[!INCLUDE [calendar_swagger2](Data\test.json)]
-```
 
 ## Node of Bookmark1 
 ### Node of Bookmark with H3
