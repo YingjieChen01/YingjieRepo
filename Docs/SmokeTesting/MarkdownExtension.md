@@ -6,16 +6,17 @@ Note           |NO -> S94        |After 1/13       |
 Warning/Caution|NO -> S94        |After 1/13       |   
 Tip            |NO -> S94        |After 1/13       |   
 Important      |NO -> S94        |After 1/13       |   
-Include        |Yes              |Ready for testing|Work fine   
+Include        |Yes              |Ready for testing|Work fine :
 Video          |NO               |                 |   
 Selector       |NO -> S95        |After S95 deployment|   
 Selector-List  |NO -> S95        |After S95 deployment|
 Insert API     |Yes              |Ready for testing|  
 Insert API-Swagger|Yes              |Ready for testing|  
 REference a Swagger files|Yes| Ready for testing|
-Bookmarks|  | Ready for testing| The Bookmark is not support now
+Bookmarks|  | Ready for testing| Work fine :smile:
 Code snippet|yes|Ready for testing|1. Fail to add Multiple Language 2. The language of code could not be shown
 
+:smile:
 ## Alerts (Note, Tip, Warning, Important)
 Todo
 ## Include (Tokens)
@@ -65,10 +66,11 @@ Values for type_of_api_call:
     REST-i
  
  
-***  
-```httprequest\n[!INCLUDE[test](relative_path)]\n```
+*** 
+ 
 
 ## Insert API – Swagger
+
 ```RESTAPIdocs
 {
     "api":  "Calendar Events",
