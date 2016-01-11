@@ -50,6 +50,11 @@ the-text-of-the-H2-section-separated-by-hyphens
     <Node>Test</Node>
 ```
 
+
+```C#
+    using System;
+```
+
 [!Code[jdbc_handling_errors1](CodeSnippet\jdbc_handling_errors1\Java\jdbc_handling_errors1.java)]
 [!Code[jdbc_handling_errors1](CodeSnippet\jdbc_handling_errors1\VB\jdbc_handling_errors1.vb)]
 
