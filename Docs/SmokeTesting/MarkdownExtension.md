@@ -18,7 +18,26 @@ Code snippet|yes|Ready for testing|1. Fail to add Multiple Language 2. The langu
 
 :smile:
 ## Alerts (Note, Tip, Warning, Important)
-Todo
+> [!NOTE] Sample Notification
+
+> [AZURE.NOTE] Sample Notification with Azure Syntax
+
+> [!WARNING] Sample Warning
+
+> [AZURE.WARNING] Sample Warning with Azure Syntax
+
+[!TIP] Sample Tip
+
+[AZURE.TIP] Sample Tip with Azure Syntax
+
+[!IMPORTANT] Sample Important
+
+[AZURE.IMPORTANT] Sample Important with Azure Syntax
+
+[!CAUTION] Sample Caution
+
+CAUTION with  Azure Syntax is not support
+
 ## Include (Tokens)
 Token of VS2010 from VS2010.md, should be shown as *Visual Studio 2010*: [!Include[VS2010](Tokens\VS2010.md)]
 
@@ -63,7 +82,7 @@ Todo
 ## Two-Way Selector
 Todo
 ## Insert API
-```type_of_api_call\n[!INCLUDE[file_name](relative_path)]\n```
+```REST-i\n[!INCLUDE[calendar_api_get_event_by_id](Data\calendar_api_get_event_by_id.json)]\n```
 Values for type_of_api_call:
     no-highlight
     httprequest
@@ -92,6 +111,9 @@ RESTAPIdocs
 
 
 ## Reference a Swagger file (end of .md file)
+```RESTAPI_Swagger
+[!INCLUDE [calendar_api_get_event_by_id](Data\calendar_api_get_event_by_id.json)]
+```
 
 ## Node of Bookmark1 
 ### Node of Bookmark with H3
