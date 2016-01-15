@@ -1,0 +1,9 @@
+{
+"method":"GET",
+"requestUrl":"https://caps-api-devint.azurewebsites.net/v1/Projects/5deff363-2bde-473e-8479-ea9ce1c4a6bc/BuildJobs/da180f8a-6d2e-4c09-88e5-da8372be2936--promote/properties?locale=en-US",
+"requestHeaders":
+    {
+	"Accept":"application/json",
+	"Content-Type":"application/json",
+    }
+}
