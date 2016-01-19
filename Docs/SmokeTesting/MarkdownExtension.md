@@ -18,23 +18,32 @@ Code snippet|yes|Ready for testing|1. Fail to add Multiple Language 2. The langu
 
 :smile:
 ## Alerts (Note, Tip, Warning, Important)
-> [!NOTE] Sample Notification
+> [!NOTE] 
+Sample Notification
 
-> [AZURE.NOTE] Sample Notification with Azure Syntax
+> [AZURE.NOTE] 
+Sample Notification with Azure Syntax
 
-> [!WARNING] Sample Warning
+> [!WARNING] 
+Sample Warning
 
-> [AZURE.WARNING] Sample Warning with Azure Syntax
+> [AZURE.WARNING] 
+Sample Warning with Azure Syntax
 
-[!TIP] Sample Tip
+[!TIP] 
+<Sample Tip>
 
-[AZURE.TIP] Sample Tip with Azure Syntax
+[AZURE.TIP] 
+Sample Tip with Azure Syntax
 
-[!IMPORTANT] Sample Important
+[!IMPORTANT] 
+Sample Important
 
-[AZURE.IMPORTANT] Sample Important with Azure Syntax
+[AZURE.IMPORTANT] 
+Sample Important with Azure Syntax
 
-[!CAUTION] Sample Caution
+[!CAUTION] 
+Sample Caution
 
 CAUTION with  Azure Syntax is not support
 
@@ -57,25 +66,47 @@ the-text-of-the-H2-section-separated-by-hyphens
 
 
 ## Code Snippets
-```C#
+### Single code Snippet
+
+>```C#
+>    using System;
+>```
+
+[!Code-Javascript[jdbc_handling_errors1](CodeSnippet\jdbc_handling_errors1\VB\jdbc_handling_errors1.vb)]
+
+code of the entire file
+[!Code-C#[Main](CodeSnippet\test.cs)]
+
+One snippet in the file with tag Name
+[!Code-C#[Main](CodeSnippet\test.cs#snippetGetActions "snippetGetActions")]
+
+One snippet in the file with tag Name miss title in the end
+[!Code-C#[Main](CodeSnippet\test.cs#snippetGetActions)]
+
+One snippet in the file with tag Name and special Name
+[!Code-C#[snippetGetActions](CodeSnippet\test.cs#snippetGetActions)]
+
+One snippet in the file with Code Line
+[!Code-C#[Main](CodeSnippet\test.cs#L82-L92 "snippetGetActions")]
+
+One snippet in the file with Code Line(? syntax)
+[!Code-C#[Main](CodeSnippet\test.cs?start=82&end=92)]
+
+One snippet in the file with tag Name(? syntax)
+[!Code-C#[Main](CodeSnippet\test.cs?name=snippetGetActions "snippetGetActions")]
+
+### Multiple Language
+> [!div class="tabbedCodeSnippets" data-resources="OutlookServices.Calendar"]
+>```C#
     using System;
 ```
-```VB
+>```VB
     Import System
 ```
 
-
-```XML
-    <Node>Test</Node>
-```
-
-
-```C#
-    using System;
-```
-
-[!Code[jdbc_handling_errors1](CodeSnippet\jdbc_handling_errors1\Java\jdbc_handling_errors1.java)]
-[!Code[jdbc_handling_errors1](CodeSnippet\jdbc_handling_errors1\VB\jdbc_handling_errors1.vb)]
+> [!div class="tabbedCodeSnippets" data-resources="OutlookServices.Calendar"]
+[!Code-C#[Main](CodeSnippet\test.cs?name=snippetGetActions "snippetGetActions")]
+[!Code-C#[Main](CodeSnippet\test.cs?name=snippetGetActions "snippetGetActions")]
 
 ## Simple Selector
 Todo
