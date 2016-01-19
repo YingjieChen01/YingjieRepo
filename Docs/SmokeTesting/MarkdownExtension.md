@@ -68,36 +68,36 @@ the-text-of-the-H2-section-separated-by-hyphens
 ## Code Snippets
 ### Single code Snippet
 
->```C#
+>```CSharp
 >    using System;
 >```
 
 [!Code-Javascript[jdbc_handling_errors1](CodeSnippet\jdbc_handling_errors1\VB\jdbc_handling_errors1.vb)]
 
 code of the entire file
-[!Code-C#[Main](CodeSnippet\Test.cs)]
+[!Code-CSharp[Main](CodeSnippet\TestCode\CSharp\Test.cs)]
 
 One snippet in the file with tag Name
-[!Code-C#[Main](CodeSnippet\Test.cs#snippetGetActions "snippetGetActions")]
+[!Code-CSharp[Main](CodeSnippet\TestCode\CSharp\Test.cs#snippetGetActions "snippetGetActions")]
 
 One snippet in the file with tag Name miss title in the end
-[!Code-C#[Main](CodeSnippet\Test.cs#snippetGetActions)]
+[!Code-CSharp[Main](CodeSnippet\TestCode\CSharp\Test.cs#snippetGetActions)]
 
 One snippet in the file with tag Name and special Name
-[!Code-C#[snippetGetActions](CodeSnippet\Test.cs#snippetGetActions)]
+[!Code-CSharp[snippetGetActions](CodeSnippet\TestCode\CSharp\Test.cs#snippetGetActions)]
 
 One snippet in the file with Code Line
-[!Code-C#[Main](CodeSnippet\Test.cs#L82-L92 "snippetGetActions")]
+[!Code-CSharp[Main](CodeSnippet\TestCode\CSharp\Test.cs#L82-L92 "snippetGetActions")]
 
 One snippet in the file with Code Line(? syntax)
-[!Code-C#[Main](CodeSnippet\Test.cs?start=82&end=92)]
+[!Code-CSharp[Main](CodeSnippet\TestCode\CSharp\Test.cs?start=82&end=92)]
 
 One snippet in the file with tag Name(? syntax)
-[!Code-C#[Main](CodeSnippet\Test.cs?name=snippetGetActions "snippetGetActions")]
+[!Code-CSharp[Main](CodeSnippet\TestCode\CSharp\Test.cs?name=snippetGetActions "snippetGetActions")]
 
 ### Multiple Language
 > [!div class="tabbedCodeSnippets" data-resources="OutlookServices.Calendar"]
->```C#
+>```CSharp
     using System;
 ```
 >```VB
@@ -105,8 +105,8 @@ One snippet in the file with tag Name(? syntax)
 ```
 
 > [!div class="tabbedCodeSnippets" data-resources="OutlookServices.Calendar"]
-[!Code-C#[Main](CodeSnippet\Test.cs?name=snippetGetActions "snippetGetActions")]
-[!Code-C#[Main](CodeSnippet\Test.cs?name=snippetGetActions "snippetGetActions")]
+[!Code-CSharp[Main](CodeSnippet\TestCode\CSharp\Test.cs?name=snippetGetActions "snippetGetActions")]
+[!Code-CSharp[Main](CodeSnippet\TestCode\CSharp\Test.cs?name=snippetGetActions "snippetGetActions")]
 
 ## Simple Selector
 Todo
