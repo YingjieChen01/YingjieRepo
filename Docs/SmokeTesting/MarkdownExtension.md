@@ -21,29 +21,38 @@ Code snippet|yes|Ready for testing|1. Fail to add Multiple Language 2. The langu
 > [!NOTE] 
 Sample Notification
 
+
 > [AZURE.NOTE] 
 Sample Notification with Azure Syntax
+
 
 > [!WARNING] 
 Sample Warning
 
+
 > [AZURE.WARNING] 
 Sample Warning with Azure Syntax
 
+
 [!TIP] 
-<Sample Tip>
+Sample Tip
+
 
 [AZURE.TIP] 
 Sample Tip with Azure Syntax
 
+
 [!IMPORTANT] 
 Sample Important
+
 
 [AZURE.IMPORTANT] 
 Sample Important with Azure Syntax
 
+
 [!CAUTION] 
 Sample Caution
+
 
 CAUTION with  Azure Syntax is not support
 
@@ -68,7 +77,7 @@ the-text-of-the-H2-section-separated-by-hyphens
 ## Code Snippets
 ### Single code Snippet
 
->```CSharp
+>```C#
 >    using System;
 >```
 
@@ -97,7 +106,7 @@ One snippet in the file with tag Name(? syntax)
 
 ### Multiple Language
 > [!div class="tabbedCodeSnippets" data-resources="OutlookServices.Calendar"]
->```CSharp
+>```C#
     using System;
 ```
 >```VB
