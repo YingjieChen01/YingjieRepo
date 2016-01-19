@@ -114,21 +114,18 @@ Todo
 Todo
 ## Insert API
 
+<<<<<<< HEAD
+=======
+
+## Insert API – Swagger
+>>>>>>> refs/remotes/origin/master
 
 ## Insert API – Swagger
 
 
-RESTAPIdocs
-{
-    "api":  "Calendar Events",
-    "operation":    "get events"
-} 
-
 
 ## Reference a Swagger file (end of .md file)
-```RESTAPI_Swagger
-[!INCLUDE [calendar_api_get_event_by_id](Data\calendar_api_get_event_by_id.json)]
-```
+
 
 ## Node of Bookmark1 
 ### Node of Bookmark with H3
