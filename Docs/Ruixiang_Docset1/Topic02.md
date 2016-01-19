@@ -1,49 +1,39 @@
-
-Welcome to CAPS Markdown Editor!
-====
-
 Title Heading
+# 1. H1
+## 2. H2
+### 3. H3 
+#### 4. H4
+##### 5. H5
+###### 6. H6
+7. Normal
 
-#     H1
-##     H2
-###     H3
-####     H4
-#####     H5
-######     H6
-
-# This line is Bold!!!
+#This line is Bold!!!
 **This line is Bold!!!**
 
-# This line is Italic!!!
+#This line is Italic!!!
 *This line is Italic!!!*
 
-# External link
+#External link
 [External link百度](http://www.baidu.com)
 
-# Internal link
-[Topic03](Topic03.md)
+#Internal link
+[Internal link](Topic03.md)
 
 #image
-![image1](/Images/image1.jpg)
+![image](/Image/image.jpg)
 
-# Video
-[DemoVideo](https://sec.ch9.ms/ch9/4ce4/817a99cc-24da-4689-83a8-bd5aa1c54ce4/VSToolboxContainers_high.mp4)
-
-# Token
+#Token
 Token of VS2010, should be shown as Visual Studio 2010: [!Include[VS2010](Tokens\VS2010.md)]
 
-# Table
+#Video
+[DemoVideo](https://sec.ch9.ms/ch9/4ce4/817a99cc-24da-4689-83a8-bd5aa1c54ce4/VSToolboxContainers_high.mp4)
+
+#Table
 Column1  |Column2  
 ---------|---------
 Row1     |Row2   
 
-# MD Tables 
-  Name   |   Sex   | age 
-  -------|---------|------ 
-  Yingjie| male    | 25 
-  ruixiang| male   | 22
-  
-# Code sample
+#Code sample
 
 ```
             "docset_name": "Docset2",
@@ -56,14 +46,14 @@ Row1     |Row2
 ```
 
 
-# Insert number list
+#Insert number list
 1. this is 1!!
 2. This is 2!!
 3. This is 3!!
 4. This is 4!!
 5. This is 5!!
 
-# Insert bulleted list
+#Insert bulleted list
 * The first blood !!!
 * double kill!!!
 * Treble kill!!!
@@ -71,6 +61,6 @@ Row1     |Row2
 * Penta kill!!!
 * God like!!!
 * legendary!!!
---------------------------------------------------
-# horizontal rule
+
+#horizontal rule
 --------------------------------------------------
