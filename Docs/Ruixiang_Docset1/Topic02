@@ -17,13 +17,13 @@ Title Heading
 [External link百度](http://www.baidu.com)
 
 #Internal link
-[Internal link](123123213.xml)
+[Internal link](Topic03.md)
 
 #image
 ![image](/Image/image.jpg)
 
 #Token
-[!INCLUDE[123](/Token/123.xml)]
+Token of VS2010, should be shown as Visual Studio 2010: [!Include[VS2010](Tokens\VS2010.md)]
 
 #Video
 [DemoVideo](https://sec.ch9.ms/ch9/4ce4/817a99cc-24da-4689-83a8-bd5aa1c54ce4/VSToolboxContainers_high.mp4)
