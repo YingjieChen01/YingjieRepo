@@ -114,6 +114,11 @@ Todo
 Todo
 ## Insert API
 
+<<<<<<< HEAD
+=======
+
+## Insert API – Swagger
+>>>>>>> refs/remotes/origin/master
 
 ## Insert API – Swagger
 
