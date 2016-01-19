@@ -106,10 +106,10 @@ One snippet in the file with tag Name(? syntax)
 
 ### Multiple Language
 > [!div class="tabbedCodeSnippets" data-resources="OutlookServices.Calendar"]
->```C#
+>```cs-i
     using System;
 ```
->```VB
+>```VB-i
     Import System
 ```
 
