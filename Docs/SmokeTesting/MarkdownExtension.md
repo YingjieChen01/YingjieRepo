@@ -34,23 +34,23 @@ Sample Warning
 Sample Warning with Azure Syntax
 
 
-[!TIP] 
+>[!TIP] 
 Sample Tip
 
 
-[AZURE.TIP] 
+>[AZURE.TIP] 
 Sample Tip with Azure Syntax
 
 
-[!IMPORTANT] 
+>[!IMPORTANT] 
 Sample Important
 
 
-[AZURE.IMPORTANT] 
+>[AZURE.IMPORTANT] 
 Sample Important with Azure Syntax
 
 
-[!CAUTION] 
+>[!CAUTION] 
 Sample Caution
 
 
@@ -77,7 +77,7 @@ the-text-of-the-H2-section-separated-by-hyphens
 ## Code Snippets
 ### Single code Snippet
 
->```C#
+>```cs-i
 >    using System;
 >```
 
@@ -123,14 +123,11 @@ Todo
 Todo
 ## Insert API
 
-<<<<<<< HEAD
-=======
-
-## Insert API – Swagger
->>>>>>> refs/remotes/origin/master
 
 ## Insert API – Swagger
 
+
+## Insert API – Swagger
 
 
 ## Reference a Swagger file (end of .md file)
