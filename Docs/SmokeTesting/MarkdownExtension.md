@@ -113,38 +113,14 @@ Todo
 ## Two-Way Selector
 Todo
 ## Insert API
-```REST-i\n[!INCLUDE[calendar_api_get_event_by_id](Data\calendar_api_get_event_by_id.json)]\n```
-Values for type_of_api_call:
-    no-highlight
-    httprequest
-    REST
-    REST-i
- 
- 
-*** 
- 
+
 
 ## Insert API – Swagger
 
-```RESTAPIdocs
-{
-    "api":  "Calendar Events",
-    "operation":    "get events"
-}
-``` 
-
-
-RESTAPIdocs
-{
-    "api":  "Calendar Events",
-    "operation":    "get events"
-} 
 
 
 ## Reference a Swagger file (end of .md file)
-```RESTAPI_Swagger
-[!INCLUDE [calendar_api_get_event_by_id](Data\calendar_api_get_event_by_id.json)]
-```
+
 
 ## Node of Bookmark1 
 ### Node of Bookmark with H3
