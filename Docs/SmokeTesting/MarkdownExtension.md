@@ -53,6 +53,7 @@ Sample Important with Azure Syntax
 >[!CAUTION] 
 Sample Caution
 
+>[!CAUTION]Sample Caution
 
 CAUTION with  Azure Syntax is not support
 
