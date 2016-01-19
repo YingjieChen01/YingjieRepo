@@ -46,6 +46,8 @@ Sample Tip with Azure Syntax
 Sample Important
 
 
+>[!IMPORTANT] Sample Important
+
 >[AZURE.IMPORTANT] 
 Sample Important with Azure Syntax
 
