@@ -19,7 +19,7 @@ Code snippet|yes|Ready for testing|1. Fail to add Multiple Language 2. The langu
 :smile:
 ## Alerts (Note, Tip, Warning, Important)
 > [!NOTE] 
-Sample Notification
+> Sample Notification
 
 
 > [AZURE.NOTE] 
