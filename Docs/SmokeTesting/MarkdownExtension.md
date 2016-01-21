@@ -60,6 +60,9 @@ Sample Caution
 CAUTION with  Azure Syntax is not support
 
 ## Include (Tokens)
+[!Include[VS2010](Data\InsertFile.md)]
+
+
 Token of VS2010 from VS2010.md, should be shown as *Visual Studio 2010*: [!Include[VS2010](Tokens\VS2010.md)]
 
 Token of VS2011 form vs2011.xml, should be shown as *Visual Studio 2011*: [!Include[VS2011](Tokens\VS2011.XML)]
