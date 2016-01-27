@@ -46,14 +46,7 @@ Element sup: WWW<sup>[1]</sup><br/>
 Element sub: H<sub>2</sub>O<br/>
 </p>
 
-<p>My mother has <span style="color:blue;font-weight:bold">blue</span> eyes and my father has <span style="color:darkolivegreen;font-weight:bold">dark green</span> eyes.</p>
 
-## **Break**
-<p>
-To break lines<br>in a text,<br>use the br element.
-</p>
-
-<p>Leave 2 spaces at the end of a line to do a<hr /> line break</p>
 
 </body>
 </html>

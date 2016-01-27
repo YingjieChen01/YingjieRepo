@@ -8,6 +8,9 @@
 <h3>Online source<h3>
 <img src="http://www.w3school.com.cn/i/w3school_logo_white.gif"/><br>
 
+<h3>Online source with longdesc<h3>
+<img src="http://www.w3school.com.cn/i/w3school_logo_white.gif" longdesc="Documents\w3s.txt"/><br>
+
 
 <h4>Image with border:</h4>
 <img src="http://www.w3school.com.cn/i/w3school_logo_white.gif"  border="5" /><br>
@@ -25,7 +28,7 @@
 <img src="http://www.w3school.com.cn/i/w3school_logo_white1.gif" alt="W3Schools.com" ><br>
 
 <h4>Image is map, Click the image will be sent to the other page<h4>
-<a href="HtmlSyntex_Result.md">
+<a href="HtmlSyntax_Result.md">
   <img src="http://www.w3school.com.cn/i/w3school_logo_white.gif" alt="W3Schools.com"  ismap>
 </a>
 
