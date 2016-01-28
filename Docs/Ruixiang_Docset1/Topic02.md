@@ -24,7 +24,7 @@ Title Heading
 [Topic03](Topic03.md)
 
 #image
-![image1](Images/image1.jpg)
+![image1](Images\image1.jpg)
 
 # Video
 [DemoVideo](https://sec.ch9.ms/ch9/4ce4/817a99cc-24da-4689-83a8-bd5aa1c54ce4/VSToolboxContainers_high.mp4)
@@ -105,7 +105,13 @@ I get 10 times more traffic from [Google] [1] than from
 ![Alt text](http://pica.nipic.com/2008-01-09/200819134250665_2.jpg)
 
 
-
 ![Alt text](http://pica.nipic.com/2008-01-09/200819134250665_2.jpg "Optional title")
+ 
+ 
+ ![Alt text][lalala]
+[lalala]: http://pica.nipic.com/2008-01-09/200819134250665_2.jpg
 
+
+ ![image1][11]
+ [11]: Images\image1.jpg
  
