@@ -4,7 +4,7 @@
 <h1>Input test</h1>
 
 
-<form action="HtmlSyntex_Result"  accept-charset="UTF-8" enctype="text/plain" method="get" target="_blank">
+<form action="HtmlSyntax_Result"  accept-charset="UTF-8" enctype="text/plain" method="get" target="_blank">
 <p>Here only accept image type</p>
   <input type="file" name="pic" accept="image/*"><br><br>
   
