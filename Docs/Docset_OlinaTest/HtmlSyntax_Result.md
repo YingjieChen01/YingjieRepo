@@ -7,7 +7,7 @@
         window.onload = function () 
         {
              var Name = Response.QueryString["FirstName"];
-              alert(Name);
+             document.getElementById("aaa").value=Name;
         }
 
     </script>
@@ -27,16 +27,8 @@ body {background-color:#FFFFFF;}
 <body>
 <h1>Header 1</h1>
 <p>A paragraph.</p>
-<p>
-The first name is：@<%=Request.Form("FirstName")%> <br>
-The last name is：<%=Request.Form("LastName")%> <br>
 
-The first name is：Request(FirstName) <br>
-The last name is：Request(LastName) <br>
-
-The first name is：@Response.QueryString["FirstName"] <br>
-The last name is：Response.QueryString["LastName"] <br>
-
+<input type="text" id="aaa"/>
 </p>
 </body>
 </html>
