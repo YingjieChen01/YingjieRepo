@@ -1,8 +1,8 @@
 <h1>Link test</h1>
 <p>test Http:// Open W3C link</p>
 <a href="http://www.w3schools.com" target="_blank">Visit W3Schools.com!</a><br>
-<p>test Https:// Click it will jump to "https://msdnstage-ppe.redmond.corp.microsoft.com/"</p>
-<a href="https://msdnstage-ppe.redmond.corp.microsoft.com/">msdnstage-ppe</a><br>
+<p>test Https:// Click it will jump to "https://ppe.msdn.microsoft.com/en-us/default.aspx"</p>
+<a href="https://ppe.msdn.microsoft.com/en-us/default.aspx">msdnstage-ppe</a><br>
 <p>test mailto:// Send mail to Olina</P>
 <a href="mailto://v-olliu@microsoft.com">Send Mail</a><br>
 <p>test github-windows:// Open Github</P>

@@ -8,7 +8,7 @@
 </ul>
 
 <h3>unordered List with compact="compact"</h3>
-<p>任何主流浏览器都不支持 compact 属性。</p>
+
 <ul compact="compact">
 <li>Coffer</li>
 <li>Tea</li>

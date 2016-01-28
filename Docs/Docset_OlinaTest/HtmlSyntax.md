@@ -64,7 +64,7 @@ For 50 years, WWF has been protecting the future of nature. The world's leading 
 
 <h3>***** "div" test*****</h3>
 <p>This is some text.</p>
-<div style="color:#0000FF">
+<div style="color:red">
   <h3>This is a heading in a div element</h3>
   <p>This is some text in a div element.</p>
 </div>

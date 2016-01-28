@@ -3,7 +3,7 @@
 <script type="text/javascript">
 function disp_prompt()
   {
-  var name=prompt("Please enter your name","Bill Gates")
+  var name=prompt("Please enter your name","Bill Gates");
   if (name!=null && name!="")
     {
     document.write("Hello " + name + "!")

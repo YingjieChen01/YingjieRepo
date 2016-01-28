@@ -27,7 +27,7 @@ Last name: <input type="text" name="LastName" value="Mouse"><br>
 </select>
 
 <h4>"option" with "multiple" attribute:</h4>
-<select multiple="multiple" size="4" height>
+<select multiple="multiple" size="4" >
   <option value="volvo">Volvo</option>
   <option value="saab">Saab</option>
   <option value="mercedes">Mercedes</option>

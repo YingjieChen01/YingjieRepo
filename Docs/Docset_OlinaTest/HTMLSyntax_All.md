@@ -1,7 +1,7 @@
 
 <html>
 <head>
-<title>Title tag test: Title of the document</title>
+<title>Title of the document</title>
 </head>
 
 <body>
@@ -24,7 +24,7 @@ The content of the document......<br>
 
 <h3>*****"lang" test with Franch language*****</h3>
 <p>This is a paragraph.</p>
-<p lang="fr">Ceci est un paragraphe.</p>
+<p lang="fr">Ceci est un paragraphe.中文字符测试</p>
 
 <h3>"Span" test</h3>
 <p>My mother has <span style="color:blue;font-weight:bold">blue</span> eyes and my father has 
@@ -59,5 +59,12 @@ This document teaches you everything you have to learn about HTML 5.
 <p>I have a date on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
 
 <p><b>Note:</b> The time element does not render as anything special in any of the major browsers.</p>
+
+<!-- Position #3 --> 
+<div itemscope itemtype="http://schema.org/Organization">    
+<h2><span itemprop="jobTitle">Web Developer / Programmer</span></h2>
+ <p class="bus1"><span itemprop="name">Company Name 3</span></p>
+ <p class="time">March 2006 - November 2007</p>    
+<p itemprop="description"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.  </p>    </div> 
 
 </html>

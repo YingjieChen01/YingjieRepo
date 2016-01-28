@@ -32,7 +32,7 @@ table, th, td {
 <br>
 
 <h4>Simple table with cellpadding<h4>
-<table cellpadding="20">
+<table cellpadding="50">
   <tr>
     <th>Month</th>
     <th>Savings</th>
@@ -49,7 +49,7 @@ table, th, td {
 <br>
 
 <h4>Simple table with cellspacing<h4>
-<table cellspacing="20">
+<table cellspacing="50">
   <tr>
     <th>Month</th>
     <th>Savings</th>
@@ -135,7 +135,7 @@ table, th, td {
 </table>
 
 <h4>Table with headers attribute:</h4>
-<table style="width:100%">
+<table style="width:60%">
   <tr>
     <th id="name">Name</th>
     <th id="email">Email</th>
@@ -174,7 +174,7 @@ Syntax: <td scope="col|row|colgroup|rowgroup">-->
 
 
 <h4>td with nowrap="nowrap":</h4>
-<table rules="cols">
+<table>
   <tr>
     <th>Poem</th>
     <th>Poem</th>
@@ -187,7 +187,7 @@ Syntax: <td scope="col|row|colgroup|rowgroup">-->
 
 <h4>td with axis:</h4>
 <p><b>Note:</b> The axis attribute is not supported by any of the major browsers.</p>
-<table border="1" width="100%">
+<table border="1" width="60%">
   <tr>
     <th axis="name">Name</td>
     <th axis="contact">Email</td>
@@ -203,7 +203,6 @@ Syntax: <td scope="col|row|colgroup|rowgroup">-->
 </table>
 
 <h4>td with char:</h4>
-<p><b>Note:</b> The char attribute is not supported by any of the major browsers.</p>
 <table border="1">
   <tr>
     <th>Month</th>
@@ -220,7 +219,6 @@ Syntax: <td scope="col|row|colgroup|rowgroup">-->
 </table>
 
 <h4>td with charoff="2":</h4>
-<p><b>Note:</b> The charoff attribute is not supported by any of the major browsers.</p>
 <table>
   <tr>
     <th>Month</th>
