@@ -92,17 +92,24 @@ This is [an example][id1] reference-style link.
 
 This is [an example][id] reference-style link.
 
+I get 10 times more traffic from [Google] [1] than from
+[Yahoo] [2] or [MSN] [3].
+
+  [1]: http://google.com/        "Google"
+  [2]: http://search.yahoo.com/  "Yahoo Search"
+  [3]: http://search.msn.com/    "MSN Search"
+
 [Google][]
 [Google]: http://google.com/
 
 ![Alt text](http://pica.nipic.com/2008-01-09/200819134250665_2.jpg)
 
 ![Alt text][lalala]
-[lalala]: http://pica.nipic.com/2008-01-09/200819134250665_2.jpg)
+[lalala]: http://pica.nipic.com/2008-01-09/200819134250665_2.jpg/
 
 ![Alt text](http://pica.nipic.com/2008-01-09/200819134250665_2.jpg "Optional title")
  
 
  ![image1][11]
- [11]: (Images/image1.jpg)
+ [11]: Images/image1.jpg/
  
