@@ -1,3 +1,6 @@
 # [topic01](Topic01.md) 
 ## [topic02](Topic02.md)
 ### [topic03](Topic03.md)
+## [TextStyle](Markdown_TextStyle.md)
+## [TextStyle](Markdown_LinkInsert.md)
+## [TextStyle](Markdown_ListInsert.md)
