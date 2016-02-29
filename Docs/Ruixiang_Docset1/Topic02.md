@@ -4,18 +4,21 @@ Welcome to CAPS Markdown Editor!
 
 Title Heading
 
-#     H1
-##     H2
-###     H3
-####     H4
-#####     H5
-######     H6
+#    This is H1 Title Heading
+##     This is H2 Title Heading
+###      This is H3 Title Heading
+####      This is H4 Title Heading
+#####      This is H5 Title Heading
+######      This is H6 Title Heading
 
-# This line is Bold!!!
+## This line is Bold!!!
 **This line is Bold!!!**
 
-# This line is Italic!!!
+## This line is Italic!!!
 *This line is Italic!!!*
+
+## This line is Bold and Italic!!!
+***This line is Bold and Italic!!!***
 
 # External link
 [External link百度](http://www.baidu.com)
