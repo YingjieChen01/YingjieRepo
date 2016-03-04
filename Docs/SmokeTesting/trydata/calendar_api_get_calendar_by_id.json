@@ -1,0 +1,25 @@
+{
+    "method": "GET",
+    "resourceFormat": "https://outlook.office365.com/api/v1.0/me/calendars/{calendar_id}",
+    "requestUrl": "https://outlook.office365.com/api/v1.0/me/calendars/AAMkAGI2NGVhZTVlLTI1OGMtNDI4My1iZmE5LTA5OGJiZGEzMTc0YQBGAAAAAADUuTJK1K9aTpCdqXop_4NaBwCd9nJ-tVysQos2hTfspaWRAAAAAAEGAACd9nJ-tVysQos2hTfspaWRAAADTGuLAAA=",
+    "requestHeaders": {
+        "Accept": "application/json"
+    },
+    "parameterDetails": [
+        {
+            "name": "calendar_id",
+            "type": "string",
+            "description": "The calendar ID.",
+            "defaultValue": "AAMkAGI2NGVhZTVlLTI1OGMtNDI4My1iZmE5LTA5OGJiZGEzMTc0YQBGAAAAAADUuTJK1K9aTpCdqXop_4NaBwCd9nJ-tVysQos2hTfspaWRAAAAAAEGAACd9nJ-tVysQos2hTfspaWRAAADTGuLAAA="
+        }
+    ],
+    "statusCode": 200,
+    "responseBody": {
+        "@odata.context": "https://outlook.office365.com/api/v1.0/$metadata#Me/Calendars/$entity",
+        "@odata.id": "https://outlook.office365.com/api/v1.0/Users('alexd@a830edad9050849NDA1.onmicrosoft.com')/Calendars('AAMkAGI2NGVhZTVlLTI1OGMtNDI4My1iZmE5LTA5OGJiZGEzMTc0YQBGAAAAAADUuTJK1K9aTpCdqXop_4NaBwCd9nJ-tVysQos2hTfspaWRAAAAAAEGAACd9nJ-tVysQos2hTfspaWRAAADTGuLAAA=')",
+        "@odata.etag": "W/\"nfZyf7VcrEKLNoU37KWlkQAAA0x0+w==\"",
+        "Id": "AAMkAGI2NGVhZTVlLTI1OGMtNDI4My1iZmE5LTA5OGJiZGEzMTc0YQBGAAAAAADUuTJK1K9aTpCdqXop_4NaBwCd9nJ-tVysQos2hTfspaWRAAAAAAEGAACd9nJ-tVysQos2hTfspaWRAAADTGuLAAA=",
+        "Name": "Calendar",
+        "ChangeKey": "nfZyf7VcrEKLNoU37KWlkQAAA0x0+w=="
+    }
+}

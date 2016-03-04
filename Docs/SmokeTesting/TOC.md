@@ -6,3 +6,4 @@
 # [HTMLSyntax](HTMLSyntax.md)  
 # [HTMLandMDSyntax](HTMLandMDSyntax.md)
 # [MarkdownExtension](MarkdownExtension.md)
+# [API](API.md)
