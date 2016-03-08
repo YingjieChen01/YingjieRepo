@@ -1,0 +1,56 @@
+# Add Columns.xml
+
+*Add columns from one dataset to another*
+
+Category: [Data Transformation\Manipulation](92B32033-F75F-4854-AC8F-9110B3FE7E09)
+
+
+## Module Overview
+[!INCLUDE[M_AddColumns](Token\M_AddColumns.md)] concatenates two datasets by combining all columns from the two datasets that you specify as inputs, to create a single dataset.
+
+
+-   To concatenate columns from different datasets, the columns in each dataset must have an equivalent number of rows.
+
+-   The number of columns in the new dataset equals the sum of the columns of both input datasets.
+
+-   You cannot choose individual columns to add \-\- all the columns from each dataset are concatenated when you use [!INCLUDE[M_AddColumns](Token\M_AddColumns.md)]. If you want to add only a subset of the columns, use [!INCLUDE[M_ProjectColumns](Token\M_ProjectColumns.md)] to create a dataset with the columns you want.
+
+-   If there are two columns with the same name in the input datasets, a numeric suffix is added to the name of the column from the dataset used in the right\-hand input. For example, if there are two instances of a column named **TargetOutcome**, the second column would be renamed **TargetOutcome (1)**.
+
+> **alert tag is not supported!!!!**
+> If you want to combine two datasets that contain a different number of rows, use [!INCLUDE[M_Join](Token\M_Join.md)], which supports outer joins on a common key column.
+Examples
+
+Concatenation of datasets is useful in many scenarios:
+
+
+-   You want to combine a column containing labels with a feature dataset. (See the [CRM](http://azure.microsoft.com/en-us/documentation/services/machine-learning/models/) example.)
+
+-   You have multiple results sets and want to concatenate them into one table. (See the [Sentiment Analysis](http://azure.microsoft.com/en-us/documentation/services/machine-learning/models/) example.)
+
+
+## Expected Inputs
+
+
+|Name|Type|Description|
+|--------|--------|---------------|
+|Left dataset|[!INCLUDE[T_DataTable](Token\T_DataTable.md)]|Left dataset|
+|Right dataset|[!INCLUDE[T_DataTable](Token\T_DataTable.md)]|Right dataset|
+
+
+## Outputs
+
+
+|Name|Type|Description|
+|--------|--------|---------------|
+|Combined dataset|[!INCLUDE[T_DataTable](Token\T_DataTable.md)]|Combined dataset|
+
+
+## Exceptions
+
+
+|Exception|Description|
+|-------------|---------------|
+|[!INCLUDE[E_NullOrEmpty](Token\E_NullOrEmpty.md)]|Exception occurs if one or more of inputs are null or empty.|
+|[!INCLUDE[E_InvalidColumnType](Token\E_InvalidColumnType.md)]|Exception occurs if one or more specified columns have type unsupported by current module.|
+
