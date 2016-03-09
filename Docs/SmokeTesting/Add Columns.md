@@ -56,4 +56,5 @@ Concatenation of datasets is useful in many scenarios:
 |[!INCLUDE[E_InvalidColumnType](Token\E_InvalidColumnType.md)]|Exception occurs if one or more specified columns have type unsupported by current module.|
 
 
-
+</br>
+</br>
