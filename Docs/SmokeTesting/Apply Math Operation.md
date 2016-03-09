@@ -94,3 +94,7 @@ For a categorical column the operation is applied not only to column data, but a
 |--------|--------|---------------|
 |Results dataset|[!INCLUDE[T_DataTable](Token\T_DataTable.md)]|Results dataset|
 
+
+
+</br>
+</br>
