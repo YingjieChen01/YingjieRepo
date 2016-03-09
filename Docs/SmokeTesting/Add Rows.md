@@ -52,3 +52,7 @@ Concatenation of rows is useful in these scenarios:
 |[!INCLUDE[E_NotCompatibleColumnTypes](Token\E_NotCompatibleColumnTypes.md)]|Exception occurs if input datasets passed to the module should have compatible column types but do not.|
 |[!INCLUDE[E_NotInRangeValue](Token\E_NotInRangeValue.md)]|Exception occurs if parameter is not in range.|
 
+
+
+</br>
+</br>
