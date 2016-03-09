@@ -89,3 +89,7 @@ The option “Tag columns as categorical” can be used to control
 |--------|--------|---------------|
 |Quantized dataset|[!INCLUDE[T_DataTable](Token\T_DataTable.md)]|Dataset after quantization is applied|
 
+
+
+</br>
+</br>
