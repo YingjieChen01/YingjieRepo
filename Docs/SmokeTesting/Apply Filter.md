@@ -1,42 +1,58 @@
-# Add Columns.xml
+# Apply Filter.xml
 
-*Add columns from one dataset to another*
+*Apply a filter such as IIR, moving average, and FIR to columns of a dataset*
 
-Category: [Data Transformation\Manipulation](92B32033-F75F-4854-AC8F-9110B3FE7E09)
+Category: [Data Transformation\Filter](529B4991-8A7F-4E12-8F36-51F9FACA4383)
 
 
 ## Module Overview
-[!INCLUDE[M_AddColumns](Token\M_AddColumns.md)] concatenates two datasets by combining all columns from the two datasets that you specify as inputs, to create a single dataset.
+[!INCLUDE[M_ApplyFilter](Token\M_ApplyFilter.md)] returns a dataset in which the selected columns have been transformed by the specified filter.
 
 
--   To concatenate columns from different datasets, the columns in each dataset must have an equivalent number of rows.
+## Technical Notes
 
--   The number of columns in the new dataset equals the sum of the columns of both input datasets.
-
--   You cannot choose individual columns to add \-\- all the columns from each dataset are concatenated when you use [!INCLUDE[M_AddColumns](Token\M_AddColumns.md)]. If you want to add only a subset of the columns, use [!INCLUDE[M_ProjectColumns](Token\M_ProjectColumns.md)] to create a dataset with the columns you want.
-
--   If there are two columns with the same name in the input datasets, a numeric suffix is added to the name of the column from the dataset used in the right\-hand input. For example, if there are two instances of a column named **TargetOutcome**, the second column would be renamed **TargetOutcome (1)**.
-
-> [!NOTE]
-> If you want to combine two datasets that contain a different number of rows, use [!INCLUDE[M_Join](Token\M_Join.md)], which supports outer joins on a common key column.
-
-Examples
-
-Concatenation of datasets is useful in many scenarios:
+### Filter Periods
+When you apply a filter to a column, note that the filter period is determined in part by the filter type,as follows:
 
 
--   You want to combine a column containing labels with a feature dataset. (See the [CRM](http://azure.microsoft.com/en-us/documentation/services/machine-learning/models/) example.)
+-   For Finite Impulse Response, Simple Moving Average, and Triangular Moving Average filters, the filter period is **finite**.
 
--   You have multiple results sets and want to concatenate them into one table. (See the [Sentiment Analysis](http://azure.microsoft.com/en-us/documentation/services/machine-learning/models/) example.)
+-   For Infinite Impulse Response, Exponential Moving Average, and Cumulative Moving Average filters, the filter period is **infinite**.
+
+-   For Threshold filters, the filter period is always **1**.
+
+-   For Median filters, regardless of the filter period, NaNs and missing values in the input signal do not produce new NaNs in output.
 
 
+### How Missing Values are Handled
+If a filter encounters a NaN or a missing value in the input dataset, the output dataset becomes spoiled with NaNs for some next number of samples, depending on the filter period. This has the following consequences:
+
+
+-   Filters created using Finite Impulse Response, Simple Moving Average, or Triangular Moving Average have a finite period; thus, any missing value will be followed by a number of NaNs equal to the filter order minus one.
+
+-   Filters created using Infinite Impulse Response, Exponential Moving Average, or Cumulative Moving Average have an infinite period; thus, after the first missing value is encountered, NaNs will continue to propogate indefinitely.
+
+-   Because the period of the Threshold filter equals 1, missing values and NaNs do not propagate.
+
+-   For Median filters, NaNs and missing values encountered in the input dataset do not produce new NaNs in output, regardless of the filter period.
+
+
+## 
 ## Expected Inputs
 
 
 |Name|Type|Description|
 |--------|--------|---------------|
-|Left dataset|[!INCLUDE[T_DataTable](Token\T_DataTable.md)]|Left dataset|
-|Right dataset|[!INCLUDE[T_DataTable](Token\T_DataTable.md)]|Right dataset|
+|Filter|[!INCLUDE[T_IFilter](Token\T_IFilter.md)]|Filter implementation|
+|Dataset|[!INCLUDE[T_DataTable](Token\T_DataTable.md)]|Input dataset|
+
+
+## Module Parameters
+
+
+|Name|Range|Type|Default|Description|
+|--------|---------|--------|-----------|---------------|
+|Column set|any|ColumnSelection|NumericAll|Select the columns to filter|
 
 
 ## Outputs
@@ -44,16 +60,22 @@ Concatenation of datasets is useful in many scenarios:
 
 |Name|Type|Description|
 |--------|--------|---------------|
-|Combined dataset|[!INCLUDE[T_DataTable](Token\T_DataTable.md)]|Combined dataset|
+|Results dataset|[!INCLUDE[T_DataTable](Token\T_DataTable.md)]|Output dataset|
 
 
-## Exceptions
+## See Also
+Reference [!INCLUDE[ProductName](Token\ProductName.md)] modules
 
 
-|Exception|Description|
-|-------------|---------------|
-|[!INCLUDE[E_NullOrEmpty](Token\E_NullOrEmpty.md)]|Exception occurs if one or more of inputs are null or empty.|
-|[!INCLUDE[E_InvalidColumnType](Token\E_InvalidColumnType.md)]|Exception occurs if one or more specified columns have type unsupported by current module.|
+
+|Module|Description|
+|----------|---------------|
+|[!INCLUDE[M_FIRFilter](Token\M_FIRFilter.md)]|Create a finite impulse response (FIR) filter|
+|[!INCLUDE[M_IIRFilter](Token\M_IIRFilter.md)]|Create an infinite impulse response (IIR) filter|
+|[!INCLUDE[M_MedianFilter](Token\M_MedianFilter.md)]|Create a median filter|
+|[!INCLUDE[M_MovingAverageFilter](Token\M_MovingAverageFilter.md)]|Create a moving average filter|
+|[!INCLUDE[M_ThresholdFilter](Token\M_ThresholdFilter.md)]|Create a threshold filter|
+|[!INCLUDE[M_UserDefinedFilter](Token\M_UserDefinedFilter.md)]|Create a custom IIR or FIR filter|
 
 </br>
 </br>
