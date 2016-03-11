@@ -7,23 +7,23 @@ Category: [Statistical Functions](8A248CBA-24AA-4779-AAD6-35D73A0A2340)
 
 ## Module Overview
 [!INCLUDE[M_ApplyMathOp](Token\M_ApplyMathOp.md)] returns a data table where elements of
-  selected columns have been transformed by the specified operation.
-  For unary operations, such as Abs(x), the operation is applied to each
-  of elements. For binary operations, such as Subtract(x,y), two selections
-  of columns are required and the result is computed over pairs of elements
-  between columns.
+selected columns have been transformed by the specified operation.
+For unary operations, such as Abs(x), the operation is applied to each
+of elements. For binary operations, such as Subtract(x,y), two selections
+of columns are required and the result is computed over pairs of elements
+between columns.
 
 **Column Type Evaluation**
 
 Input columns must be numeric and the range of data must be valid for
-  the selected mathematical operation. Otherwise an error or NaN result may
-  occur. For example, Ln(\-1.0) yields NaN result.
+the selected mathematical operation. Otherwise an error or NaN result may
+occur. For example, Ln(\-1.0) yields NaN result.
 
 For a sparse column all elements that correspond to background zeros are not processed in an unary operation.
-  If one argument of a binary operation is a sparse column and the other argument is a dense one,
-  then the resulting column is sparse with all background zeros propagated from input sparse column.
-  If both arguments of a binary operation are sparse columns, then the resulting column
-  contains background zeros in all positions where both input columns contained background zeros.
+If one argument of a binary operation is a sparse column and the other argument is a dense one,
+then the resulting column is sparse with all background zeros propagated from input sparse column.
+If both arguments of a binary operation are sparse columns, then the resulting column
+contains background zeros in all positions where both input columns contained background zeros.
 
 For a categorical column the operation is applied not only to column data, but also to categorical data values.
 
@@ -39,14 +39,13 @@ of the operation is a scalar.
 -   If a binary operation is applied to a categorical column and some other column, then the behavior of the module is as follows:
 
 
-1.  If the other column is dense, then the output column is categorical.
-    -  asdasd
-    -  asdas
+    1.  If the other column is dense, then the output column is categorical.
+
 Categorical data values present in input are lost.
 
 The output column has only those values that are present in output column data.
 
-2.  If the other column is sparse, then the output column is sparse.
+    2.  If the other column is sparse, then the output column is sparse.
 
 
 ## Expected Inputs
@@ -94,8 +93,6 @@ The output column has only those values that are present in output column data.
 |Name|Type|Description|
 |--------|--------|---------------|
 |Results dataset|[!INCLUDE[T_DataTable](Token\T_DataTable.md)]|Results dataset|
-
-
 
 </br>
 </br>
