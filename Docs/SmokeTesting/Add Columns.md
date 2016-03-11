@@ -55,6 +55,5 @@ Concatenation of datasets is useful in many scenarios:
 |[!INCLUDE[E_NullOrEmpty](Token\E_NullOrEmpty.md)]|Exception occurs if one or more of inputs are null or empty.|
 |[!INCLUDE[E_InvalidColumnType](Token\E_InvalidColumnType.md)]|Exception occurs if one or more specified columns have type unsupported by current module.|
 
-
 </br>
 </br>
