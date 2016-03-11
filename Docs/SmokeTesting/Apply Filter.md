@@ -37,7 +37,7 @@ If a filter encounters a NaN or a missing value in the input dataset, the output
 -   For Median filters, NaNs and missing values encountered in the input dataset do not produce new NaNs in output, regardless of the filter period.
 
 
-## 
+##
 ## Expected Inputs
 
 
