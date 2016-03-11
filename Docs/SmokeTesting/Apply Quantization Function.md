@@ -27,35 +27,35 @@ The binning mode specifies how the bin edges are determined:
 
     The data is binned so as to make
     
-          distribution across bins equal\-height. Parameter “Number of bins”
+    distribution across bins equal\-height. Parameter “Number of bins”
           
-          must be specified
+    must be specified
 
     Parameter “Quantile normalization” must also be specified.
     
-          This parameter determines the normalization: \[1,number of bins],
+    This parameter determines the normalization: \[1,number of bins],
           
-          \[0,1] or \[0,100]
+    \[0,1] or \[0,100]
 
 -   **[!INCLUDE[T_QuantizationMode.EqualWidth](Token\T_QuantizationMode.EqualWidth.md)]**
 
     data is binned into **math tag is not supported!!!!**
     
-     equal\-width bins.
+    equal\-width bins.
      
-          For this mode, narameter “Number of bins” must be specified.
+    For this mode, narameter “Number of bins” must be specified.
 
 -   **[!INCLUDE[T_QuantizationMode.EqualWidthCustomStartAndStop](Token\T_QuantizationMode.EqualWidthCustomStartAndStop.md)]**
 
     For this mode, parameters  “First edge position”, “Bin width” and
     
-          “Last edge position” must be specified.
+    “Last edge position” must be specified.
 
 -   **[!INCLUDE[T_QuantizationMode.CustomEdges](Token\T_QuantizationMode.CustomEdges.md)]**
 
     For this mode, a comma\-separated list of bin edges in sorted order must
     
-          be specified.
+    be specified.
 
 The same binning rule is applied to all columns specified in list of
   columns to quantize. The output mode specifies how the quantized values are
