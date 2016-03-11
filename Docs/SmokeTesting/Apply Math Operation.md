@@ -40,10 +40,10 @@ of the operation is a scalar.
 
   
     1. If the other column is dense, then the output column is categorical.
-
-Categorical data values present in input are lost.
-
-The output column has only those values that are present in output column data.
+      
+       Categorical data values present in input are lost.
+       
+       The output column has only those values that are present in output column data.
   
     2. If the other column is sparse, then the output column is sparse.
 
