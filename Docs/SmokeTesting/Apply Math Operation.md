@@ -29,21 +29,22 @@ For a categorical column the operation is applied not only to column data, but a
 
 
 -   If a unary operation is applied to a categorical column, then different categorical data values of input column can be transformed
-    to equal associated categorical data values of the output column.
+to equal associated categorical data values of the output column.
 
-    In this case the values are merged and the number of categorical data values in the output becomes less than the number in the input.
+In this case the values are merged and the number of categorical data values in the output becomes less than the number in the input.
 
 -   The same statement is true also for the case when a binary operation is applied to a categorical column and the second argument
-    of the operation is a scalar.
+of the operation is a scalar.
 
 -   If a binary operation is applied to a categorical column and some other column, then the behavior of the module is as follows:
 
 
 1.  If the other column is dense, then the output column is categorical.
+    -  asdasd
+    -  asdas
+Categorical data values present in input are lost.
 
- Categorical data values present in input are lost.
-
- The output column has only those values that are present in output column data.
+The output column has only those values that are present in output column data.
 
 2.  If the other column is sparse, then the output column is sparse.
 
