@@ -37,14 +37,12 @@ to equal associated categorical data values of the output column.
 of the operation is a scalar.
 
 -   If a binary operation is applied to a categorical column and some other column, then the behavior of the module is as follows:
-
     
     1. If the other column is dense, then the output column is categorical.
         
         Categorical data values present in input are lost.
         
         The output column has only those values that are present in output column data.
-    
     2. If the other column is sparse, then the output column is sparse.
 
 
