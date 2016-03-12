@@ -1,9 +1,7 @@
 # Apply Math Operation.xml
 
 *Apply a mathematical operation to the selected columns*
-
 Category: [Statistical Functions](8A248CBA-24AA-4779-AAD6-35D73A0A2340)
-
 
 ## Module Overview
 [!INCLUDE[M_ApplyMathOp](Token\M_ApplyMathOp.md)] returns a data table where elements of
@@ -12,21 +10,16 @@ For unary operations, such as Abs(x), the operation is applied to each
 of elements. For binary operations, such as Subtract(x,y), two selections
 of columns are required and the result is computed over pairs of elements
 between columns.
-
 **Column Type Evaluation**
-
 Input columns must be numeric and the range of data must be valid for
 the selected mathematical operation. Otherwise an error or NaN result may
 occur. For example, Ln(\-1.0) yields NaN result.
-
 For a sparse column all elements that correspond to background zeros are not processed in an unary operation.
 If one argument of a binary operation is a sparse column and the other argument is a dense one,
 then the resulting column is sparse with all background zeros propagated from input sparse column.
 If both arguments of a binary operation are sparse columns, then the resulting column
 contains background zeros in all positions where both input columns contained background zeros.
-
 For a categorical column the operation is applied not only to column data, but also to categorical data values.
-
 
 -   If a unary operation is applied to a categorical column, then different categorical data values of input column can be transformed
 to equal associated categorical data values of the output column.
@@ -42,7 +35,7 @@ of the operation is a scalar.
         
         Categorical data values present in input are lost.
         
-        The output column has only those values that are present in output column data.
+        The output column has only those values that are present in output column data.    
     2. If the other column is sparse, then the output column is sparse.
 
 
@@ -50,7 +43,7 @@ of the operation is a scalar.
 
 
 |Name|Type|Description|
-|--------|--------|---------------|
+|------|------|-------------|
 |Dataset|[!INCLUDE[T_DataTable](Token\T_DataTable.md)]|Input dataset|
 
 
@@ -58,7 +51,7 @@ of the operation is a scalar.
 
 
 |Name|Range|Type|Default|Description|
-|--------|---------|--------|-----------|---------------|
+|------|-------|------|---------|-------------|
 |Category|any|MathMethods|Trigonometric|Choose a category of mathematical functions|
 |Trigonometric function|any|TrigMethods|Sin|Select a trigonometric function|
 |Basic math function|any|BasicMethods|Abs|Select one of the provided basic math functions|
@@ -89,7 +82,7 @@ of the operation is a scalar.
 
 
 |Name|Type|Description|
-|--------|--------|---------------|
+|------|------|-------------|
 |Results dataset|[!INCLUDE[T_DataTable](Token\T_DataTable.md)]|Results dataset|
 
 </br>
