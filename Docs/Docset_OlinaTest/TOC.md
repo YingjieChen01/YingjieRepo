@@ -10,3 +10,4 @@
 ##[HtmlSyntax_Art](HtmlSyntax_Art.md)
 ##[HtmlSyntax_Result](HtmlSyntax_Result.md)
 ##[HTMLSyntax_All](HTMLSyntax_All.md)
+##[HTMLSyntax_prompt](HTMLSyntax_prompt.md)
