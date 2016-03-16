@@ -17,7 +17,7 @@
 ![flower](Images\gif_MD.gif)<br>
 ![flower](Images\image12.jpg "Pot culture")
 
-<img src="..\Images\Tulips.gif" alt="Tulips"><br>
+
 ![flower](..\Images\Lighthouse.jpg)<br>
 
 <img src="..\SmokeTesting\Images\Lighthouse.jpg" alt="Lighthouse"><br>
