@@ -17,3 +17,8 @@
 ![flower](Images\gif_MD.gif)<br>
 ![flower](Images\image12.jpg "Pot culture")
 
+<img src="..\Images\image1.jpg" alt="image1"><br>
+![flower](..\Images\image2.jpg)<br>
+
+<img src="..\SmokeTesting\Images\Lighthouse.jpg" alt="Lighthouse"><br>
+![flower](..\SmokeTesting\Images\Desert.jpg "Desert")<br>
