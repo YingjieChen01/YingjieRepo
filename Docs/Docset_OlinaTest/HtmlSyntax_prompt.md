@@ -20,5 +20,47 @@
 ![flower](Images\Images Test\bmp MD.bmp)<br>
 <img src="Images\Images Test\flower 1.jpg" alt="Flower"><br>
 
-![flower](root.jpg)<br>
+<p>not support by OPS</p>
+
+<p>!(flower](Images\rabbit.jpg)</p>
+!(flower](Images\rabbit.jpg)<br>
+
+<p>!(flower)(Images\rabbit.jpg)</p>
+!(flower)(Images\rabbit.jpg)<br>
+
+<p>![flower]Images\rabbit.jpg)</p>
+![flower]Images\rabbit.jpg)<br>
+
+<p>![flower][Images\rabbit.jpg]</p>
+![flower][Images\rabbit.jpg]<br>
+
+<p>!(Images\rabbit.jpg)</p>
+!(Images\rabbit.jpg)<br>
+
+<p>[flower](Images\rabbit.jpg)</p>
+[flower](Images\rabbit.jpg)<br>
+
+<p>!"flower"(Images\rabbit.jpg]</p>
+!"flower"(Images\rabbit.jpg]<br>
+
+<p>![flower]{Images\rabbit.jpg}</p>
+![flower]{Images\rabbit.jpg}<br>
+
+<p>![flower](.\Images\Lighthouse.jpg)</p>
+![flower](.\Images\Lighthouse.jpg)<br>
+
+<p>![flower](../Images/Lighthouse.jpg)</p>
+![flower](../Images/Lighthouse.jpg)<br>
+
+<p>!"image"(Images\image13.jpg)</p>
+!"image"(Images\image13.jpg)<br>
+
+<p>![image]"Images\image14.jpg"</p>
+![image]"Images\image14.jpg"<br>
+
+<p>![image]"..\Images\image15.jpg"</p>
+![image]"..\Images\image15.jpg"<br>
+
+<p>![image]"Images\image16.jpg"</p>
+![image]"Images\image16.jpg"<br>
 
