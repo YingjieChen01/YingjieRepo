@@ -34,11 +34,11 @@
 <p>![flower][Images\rabbit.jpg]</p>
 ![flower][Images\rabbit.jpg]<br>
 
-<p>!(Images\rabbit.jpg)</p>
-!(Images\rabbit.jpg)<br>
+<p>!(Images\image13.jpg)</p>
+!(Images\image13.jpg)<br>
 
-<p>[flower](Images\rabbit.jpg)</p>
-[flower](Images\rabbit.jpg)<br>
+<p>[flower](Images\image14.jpg)</p>
+[flower](Images\image14.jpg)<br>
 
 <p>!"flower"(Images\rabbit.jpg]</p>
 !"flower"(Images\rabbit.jpg]<br>
@@ -46,11 +46,7 @@
 <p>![flower]{Images\rabbit.jpg}</p>
 ![flower]{Images\rabbit.jpg}<br>
 
-<p>![flower](.\Images\Lighthouse.jpg)</p>
-![flower](.\Images\Lighthouse.jpg)<br>
 
-<p>![flower](../Images/Lighthouse.jpg)</p>
-![flower](../Images/Lighthouse.jpg)<br>
 
 <p>!"image"(Images\image13.jpg)</p>
 !"image"(Images\image13.jpg)<br>
