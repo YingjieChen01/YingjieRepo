@@ -19,7 +19,7 @@ Code snippet|yes|Ready for testing|1. Fail to add Multiple Language 2. The langu
 :smile:
 ## Alerts (Note, Tip, Warning, Important)
 > [!NOTE] 
-> Sample Notification
+Sample Notification
 
 
 > [AZURE.NOTE] 
@@ -34,35 +34,29 @@ Sample Warning
 Sample Warning with Azure Syntax
 
 
->[!TIP] 
+[!TIP] 
 Sample Tip
 
 
->[AZURE.TIP] 
+[AZURE.TIP] 
 Sample Tip with Azure Syntax
 
 
->[!IMPORTANT] 
+[!IMPORTANT] 
 Sample Important
 
 
->[!IMPORTANT] Sample Important
-
->[AZURE.IMPORTANT] 
+[AZURE.IMPORTANT] 
 Sample Important with Azure Syntax
 
 
->[!CAUTION] 
+[!CAUTION] 
 Sample Caution
 
->[!CAUTION]Sample Caution
 
 CAUTION with  Azure Syntax is not support
 
 ## Include (Tokens)
-[!Include[VS2010](Data\InsertFile.md)]
-
-
 Token of VS2010 from VS2010.md, should be shown as *Visual Studio 2010*: [!Include[VS2010](Tokens\VS2010.md)]
 
 Token of VS2011 form vs2011.xml, should be shown as *Visual Studio 2011*: [!Include[VS2011](Tokens\VS2011.XML)]
@@ -83,7 +77,7 @@ the-text-of-the-H2-section-separated-by-hyphens
 ## Code Snippets
 ### Single code Snippet
 
->```cs-i
+>```C#
 >    using System;
 >```
 
@@ -112,10 +106,10 @@ One snippet in the file with tag Name(? syntax)
 
 ### Multiple Language
 > [!div class="tabbedCodeSnippets" data-resources="OutlookServices.Calendar"]
->```cs-i
+>```C#
     using System;
 ```
->```VB-i
+>```VB
     Import System
 ```
 
@@ -129,11 +123,14 @@ Todo
 Todo
 ## Insert API
 
+<<<<<<< HEAD
+=======
+
+## Insert API – Swagger
+>>>>>>> refs/remotes/origin/master
 
 ## Insert API – Swagger
 
-
-## Insert API – Swagger
 
 
 ## Reference a Swagger file (end of .md file)

@@ -6,10 +6,3 @@
 # [HTMLSyntax](HTMLSyntax.md)  
 # [HTMLandMDSyntax](HTMLandMDSyntax.md)
 # [MarkdownExtension](MarkdownExtension.md)
-# [API](API.md)
-# MLImport
-## [Add Columns](Add Columns.md)
-## [Add Rows](Add Rows.md)
-## [Apply Filter](Apply Filter.md)
-## [Apply Math Operation](Apply Math Operation.md)
-## [Apply Quantization Function](Apply Quantization Function.md)
