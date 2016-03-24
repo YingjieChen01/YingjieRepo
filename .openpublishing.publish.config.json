@@ -63,16 +63,6 @@
             }
          },
          {
-            "docset_name": "api",
-            "build_output_subfolder": "Docs/api",
-            "locale": "en-us",
-            "version": 0,
-            "open_to_public_contributors": "false",
-            "type_mapping": {
-                "Conceptual": "Content"
-            }
-        },
-         {
             "docset_name": "WAPSQLServer_Cmdlets",
             "build_output_subfolder": "Docs/WAPSQLServer_Cmdlets",
             "locale": "en-us",
