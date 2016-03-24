@@ -63,8 +63,8 @@
             }
          },
          {
-            "docset_name": "howto",
-            "build_output_subfolder": "Docs/howto",
+            "docset_name": "api",
+            "build_output_subfolder": "Docs/api",
             "locale": "en-us",
             "version": 0,
             "open_to_public_contributors": "false",
