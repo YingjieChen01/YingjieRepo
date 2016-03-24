@@ -1,0 +1,400 @@
+﻿{
+    "swagger": "2.0",
+    "info": {
+        "title": "Domains"
+    },
+    "paths": {
+        "/domains": {
+            "get": {
+                "parameters": [
+                    {
+                        "in": "query",
+                        "description": "The version of the Graph API to target. Only 'beta' is supported. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "beta"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK. Indicates success. The results are returned in the response body.",
+                        "examples": {
+                            "application/json": {
+                                "odata.metadata": "https://graph.windows.net/contoso.onmicrosoft.com/$metadata#domains",
+                                "value": [
+                                    {
+                                        "authenticationType": "Managed",
+                                        "availabilityStatus": null,
+                                        "adminManaged": true,
+                                        "isDefault": true,
+                                        "isInitial": true,
+                                        "isRoot": true,
+                                        "isVerified": true,
+                                        "name": "contoso.onmicrosoft.com",
+                                        "supportedServices": [ "Email", "OfficeCommunicationsOnline" ]
+                                    }
+                                ]
+                            }
+
+                        }
+
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Read</i></b> or <b><i>Contacts.Write</i></b></p>",
+                "summary": "You can get a collection of domains from your tenant.",
+                "operationId": "get domains"
+            },
+            "post": {
+                "parameters": [
+                    {
+                        "in": "query",
+                        "description": "The version of the Graph API to target. Only 'beta' is supported. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "beta"
+                    },
+                    {
+                        "in": "body",
+                        "description": "The request body, not a real parameter",
+                        "name": "bodyparam",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/domain",
+                            "example": {
+                                "name": "contoso.com"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created. Indicates success. The new domain is returned in the response body.",
+                        "examples": {
+                            "application/json": {
+                                "odata.metadata": "https://graph.windows.net/contoso.onmicrosoft.com/$metadata#domains/@Element",
+                                "authenticationType": "Managed",
+                                "availabilityStatus": null,
+                                "isAdminManaged": false,
+                                "isDefault": false,
+                                "isInitial": false,
+                                "isRoot": false,
+                                "isVerified": false,
+                                "name": "contoso.com",
+                                "supportedServices": [ ]
+                            }
+                        }
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Directory.Write</i></b></p>",
+                "summary": "Add a domain to the tenant.",
+                "operationId": "create domain"
+            }
+
+        },
+        "/domains({domain_name})": {
+            "get": {
+                "parameters": [
+                    {
+                        "in": "path",
+                        "description": "The fully qualified domain name of the target domain. Must be enclosed in single quotes.",
+                        "name": "domain_name",
+                        "required": true,
+                        "type": "string",
+                        "default": "\'contoso.onmicrosoft.com\'"
+                    },
+                    {
+                        "in": "query",
+                        "description": "Specifies the version of the Graph API to target. Only 'beta' is supported. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "beta"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK. Indicates success. The domain is returned in the response body.",
+                        "examples": {
+                            "application/json": {
+                                "odata.metadata": "https://graph.windows.net/myorganization/$metadata#domains/@Element",
+                                "authenticationType": "Managed",
+                                "availabilityStatus": null,
+                                "AdminManaged": true,
+                                "isDefault": true,
+                                "isInitial": true,
+                                "isRoot": true,
+                                "isVerified": true,
+                                "name": "contoso.onmicrosoft.com",
+                                "supportedServices": [ "Email", "OfficeCommunicationsOnline" ]
+                            }
+                        }
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Read</i></b> or <b><i>Contacts.Write</i></b></p>",
+                "summary": "Get a domain.",
+                "operationId": "get a domain"
+            },
+            "patch": {
+                "parameters": [
+                    {
+                        "in": "path",
+                        "description": "The fully qualified domain name of the target domain. Must be enclosed in single quotes.",
+                        "name": "domain_name",
+                        "required": true,
+                        "type": "string",
+                        "default": "\'contoso.com\'"
+                    },
+                    {
+                        "in": "query",
+                        "description": "The version of the Graph API to target. Only 'beta' is supported. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "beta"
+                    },
+
+                    {
+                        "in": "body",
+                        "description": "this is request body, not real parameter",
+                        "name": "bodyparam",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/domain",
+                            "example": {
+                                "isDefault": true
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content. Indicates success. No response body is returned.",
+                        "examples": {
+                            "application/json": "none"
+
+                        }
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Write</i></b></p>",
+                "summary": "Change a domain's properties.",
+                "operationId": "update domain"
+            },
+            "delete": {
+                "parameters": [
+                    {
+                        "in": "path",
+                        "description": "The fully qualified domain name of the target domain. Must be enclosed in single quotes.",
+                        "name": "domain_name",
+                        "required": true,
+                        "type": "string",
+                        "default": "\'contoso.com\'"
+                    },
+                    {
+                        "in": "query",
+                        "description": "Specifies the version of the Graph API to target. Only 'beta' is supported. Required.",
+                        "name": "api-version",
+                        "required": false,
+                        "type": "string",
+                        "default": "beta"
+                    }
+
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content. Indicates success.",
+                        "examples": {
+                            "application/json": "none"
+                        }
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Write</i></b></p>",
+                "summary": "Delete a domain.",
+                "operationId": "delete domain"
+            }
+        },
+        "/domains({domain_name})/verificationDnsRecords": {
+            "get": {
+                "parameters": [
+                    {
+                        "in": "path",
+                        "description": "The fully qualified domain name of the target domain. Must be enclosed in single quotes.",
+                        "name": "domain_name",
+                        "required": true,
+                        "type": "string",
+                        "default": "\'contoso.com\'"
+                    },
+                    {
+                        "in": "query",
+                        "description": "The version of the Graph API to target. Only 'beta' is supported. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "beta"
+                    }
+
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK. Indicates success. The results are returned in the response body.",
+                        "examples": {
+                            "application/json": {
+                                "odata.metadata": "https://graph.windows.net/myorganization/$metadata#domainDnsRecords",
+                                "value": [
+                                    {
+                                        "odata.type": "Microsoft.DirectoryServices.DomainDnsTxtRecord",
+                                        "dnsRecordId": "aceff52c-06a5-447f-ac5f-256ad243cc5c",
+                                        "isOptional": false,
+                                        "label": "contoso.com",
+                                        "recordType": "Txt",
+                                        "supportedService": null,
+                                        "ttl": 3600,
+                                        "text": "MS=ms86120656"
+                                    },
+                                    {
+                                        "odata.type": "Microsoft.DirectoryServices.DomainDnsMxRecord",
+                                        "dnsRecordId": "5fbde38c-0865-497f-82b1-126f596bcee9",
+                                        "isOptional": false,
+                                        "label": "contoso.com",
+                                        "recordType": "Mx",
+                                        "supportedService": null,
+                                        "ttl": 3600,
+                                        "mailExchange": "ms86120656.msv1.invalid",
+                                        "preference": 32767
+                                    }
+                                ]
+                            }
+
+                        }
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Read</i></b> or <b><i>Contacts.Write</i></b></p>",
+                "summary": "Get a domain's verification records.",
+                "operationId": "get domain verification records"
+            }
+        },
+        "/domains({domain_name})/serviceConfigurationRecords": {
+            "get": {
+                "parameters": [
+                    {
+                        "in": "path",
+                        "description": "The fully qualified domain name of the target domain. Must be enclosed in single quotes.",
+                        "name": "domain_name",
+                        "required": true,
+                        "type": "string",
+                        "default": "\'contoso.com\'"
+                    },
+                    {
+                        "in": "query",
+                        "description": "The version of the Graph API to target. Only 'beta' is supported. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "beta"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK. Indicates success. The results are returned in the response body.",
+                        "examples": {
+                            "application/json": {
+                                "odata.metadata": "https://graph.windows.net/myorganization/$metadata#domainDnsRecords",
+                                "value": [
+                                    {
+                                        "odata.type": "Microsoft.DirectoryServices.DomainDnsMxRecord",
+                                        "dnsRecordId": "2b672ab0-0bee-476f-b334-be436f2449bd",
+                                        "isOptional": false,
+                                        "label": "contoso.com",
+                                        "recordType": "Mx",
+                                        "supportedService": "Email",
+                                        "ttl": 3600,
+                                        "mailExchange": "contoso-com.mail.protection.outlook.com",
+                                        "preference": 0
+                                    },
+                                    {
+                                        "odata.type": "Microsoft.DirectoryServices.DomainDnsTxtRecord",
+                                        "dnsRecordId": "62bea837-a0d7-4466-b6d9-ff6bd1db8671",
+                                        "isOptional": false,
+                                        "label": "contoso.com",
+                                        "recordType": "Txt",
+                                        "supportedServices": "Email",
+                                        "ttl": 3600,
+                                        "text": "v=spf1 include: spf.protection.outlook.com ~all"
+                                    },
+                                    {
+                                        "odata.type": "Microsoft.DirectoryServices.DomainDnsCnameRecord",
+                                        "dnsRecordId": "eea5ce9e-8deb-4ab7-a114-13ed6215774f",
+                                        "isOptional": false,
+                                        "label": "autodiscover.contoso.com",
+                                        "recordType": "CName",
+                                        "supportedServices": "Email",
+                                        "ttl": 3600,
+                                        "canonicalName": "autodiscover.outlook.com"
+                                    }
+                                ]
+                            }
+
+                        }
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Read</i></b> or <b><i>Contacts.Write</i></b></p>",
+                "summary": "Get domain's service configuration records.",
+                "operationId": "get domain service configuration records"
+            }
+        }
+    },
+    "host": "graph.windows.net",
+    "basePath": "/myorganization",
+    "schemes": [ "https" ],
+    "definitions": {
+
+        "domain": {
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "authenticationType": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "availabilityStatus": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "adminManaged": {
+                    "type": "boolean",
+                    "readOnly": "true"
+                },
+                "isDefault": {
+                    "type": "boolean",
+                    "readOnly": "false"
+                },
+                "isInitial": {
+                    "type": "boolean",
+                    "readOnly": "true"
+                },
+                "isRoot": {
+                    "type": "boolean",
+                    "readOnly": "true"
+                },
+                "isVerified": {
+                    "type": "boolean",
+                    "readOnly": "true"
+                },
+                "name": {
+                    "type": "string",
+                    "readOnly": "false"
+                },
+                "supportedServices": {
+                    "schema": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
