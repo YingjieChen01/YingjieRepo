@@ -1,0 +1,573 @@
+﻿{
+    "swagger": "2.0",
+    "info": {
+        "title": "Groups"
+    },
+    "paths": {
+        "/groups": {
+            "get": {
+                "parameters": [
+                    {
+                        "in": "query",
+                        "description": "The version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "1.6"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK. Indicates success. The results are returned in the response body.",
+                        "examples": {
+                            "application/json": {
+                                "odata.metadata": "https://graph.windows.net/myorganization/$metadata#directoryObjects/Microsoft.DirectoryServices.Group",
+                                "value": [
+                                    {
+                                        "odata.type": "Microsoft.DirectoryServices.Group",
+                                        "objectType": "Group",
+                                        "objectId": "c57cdc98-0dcd-4f90-a82f-c911b288bab9",
+                                        "deletionTimestamp": null,
+                                        "description": "Marketing Group",
+                                        "dirSyncEnabled": null,
+                                        "displayName": "Marketing",
+                                        "lastDirSyncTime": null,
+                                        "mail": null,
+                                        "mailNickname": "cdf76b17-0734-41bc-9c24-9a7af93f3502",
+                                        "mailEnabled": false,
+                                        "onPremisesSecurityIdentifier": null,
+                                        "provisioningErrors": [
+
+                                        ],
+                                        "proxyAddresses": [
+
+                                        ],
+                                        "securityEnabled": true
+                                    },
+                                    {
+                                        "odata.type": "Microsoft.DirectoryServices.Group",
+                                        "objectType": "Group",
+                                        "objectId": "cc9869f0-6ac0-4d00-bc24-621a2d949d35",
+                                        "deletionTimestamp": null,
+                                        "description": "Engineering Group",
+                                        "dirSyncEnabled": null,
+                                        "displayName": "Engineering",
+                                        "lastDirSyncTime": null,
+                                        "mail": null,
+                                        "mailNickname": "ef3b8cc1-721b-4452-9e30-9867d1de80ea",
+                                        "mailEnabled": false,
+                                        "onPremisesSecurityIdentifier": null,
+                                        "provisioningErrors": [
+
+                                        ],
+                                        "proxyAddresses": [
+
+                                        ],
+                                        "securityEnabled": true
+                                    },
+                                    {
+                                        "odata.type": "Microsoft.DirectoryServices.Group",
+                                        "objectType": "Group",
+                                        "objectId": "fc15e7ef-993f-4865-bf37-317d9b8017b8",
+                                        "deletionTimestamp": null,
+                                        "description": "Test Group",
+                                        "dirSyncEnabled": null,
+                                        "displayName": "Test",
+                                        "lastDirSyncTime": null,
+                                        "mail": null,
+                                        "mailNickname": "fec6273a-20af-49ba-8129-3cbde45a0a16",
+                                        "mailEnabled": false,
+                                        "onPremisesSecurityIdentifier": null,
+                                        "provisioningErrors": [
+
+                                        ],
+                                        "proxyAddresses": [
+
+                                        ],
+                                        "securityEnabled": true
+                                    }
+                                ]
+                            }
+                        }
+
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Read</i></b> or <b><i>Contacts.Write</i></b></p>",
+                "summary": "You can get a collection of groups from your tenant.",
+                "operationId": "get groups"
+            },
+            "post": {
+                "parameters": [
+                    {
+                        "in": "query",
+                        "description": "The version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "1.6"
+                    },
+                    {
+                        "in": "body",
+                        "description": "The request body, not a real parameter",
+                        "name": "bodyparam",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/group",
+                            "example": {
+                                "displayName": "Example Group",
+                                "mailNickname": "ExampleGroup",
+                                "mailEnabled": false,
+                                "securityEnabled": true
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created. Indicates success. The new group is returned in the response body.",
+                        "examples": {
+                            "application/json": {
+                                "odata.metadata": "https://graph.windows.net/myorganization/$metadata#directoryObjects/Microsoft.DirectoryServices.Group/@Element",
+                                "odata.type": "Microsoft.DirectoryServices.Group",
+                                "objectType": "Group",
+                                "objectId": "c7ebe5ed-b1d2-4990-88f7-892e4db2e5f3",
+                                "deletionTimestamp": null,
+                                "description": null,
+                                "dirSyncEnabled": null,
+                                "displayName": "Example Group",
+                                "lastDirSyncTime": null,
+                                "mail": null,
+                                "mailNickname": "ExampleGroup",
+                                "mailEnabled": false,
+                                "onPremisesSecurityIdentifier": null,
+                                "provisioningErrors": [
+
+                                ],
+                                "proxyAddresses": [
+
+                                ],
+                                "securityEnabled": true
+                            }
+                        }
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Directory.Write</i></b></p>",
+                "summary": "Add a group to the tenant.",
+                "operationId": "create group"
+            }
+
+        },
+        "/groups/{object_id}": {
+            "get": {
+                "parameters": [
+                    {
+                        "in": "path",
+                        "description": "The object ID (GUID) of the target group.",
+                        "name": "object_id",
+                        "required": true,
+                        "type": "string",
+                        "default": "b4bda672-1fba-4711-8fb1-5383c40b2c14"
+                    },
+                    {
+                        "in": "query",
+                        "description": "The version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "1.6"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK. Indicates success. The group is returned in the response body.",
+                        "examples": {
+                            "application/json": {
+                                "odata.metadata": "https://graph.windows.net/myorganization/$metadata#directoryObjects/Microsoft.DirectoryServices.Group/@Element",
+                                "odata.type": "Microsoft.DirectoryServices.Group",
+                                "objectType": "Group",
+                                "objectId": "b4bda672-1fba-4711-8fb1-5383c40b2c14",
+                                "deletionTimestamp": null,
+                                "description": "Marketing Department",
+                                "dirSyncEnabled": null,
+                                "displayName": "Marketing",
+                                "lastDirSyncTime": null,
+                                "mail": null,
+                                "mailNickname": "BposMailNickName",
+                                "mailEnabled": false,
+                                "onPremisesSecurityIdentifier": null,
+                                "provisioningErrors": [ ],
+                                "proxyAddresses": [ ],
+                                "securityEnabled": true
+                            }
+                        }
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Read</i></b> or <b><i>Contacts.Write</i></b></p>",
+                "summary": "Get a specified group.",
+                "operationId": "get group by id"
+            },
+            "patch": {
+                "parameters": [
+                    {
+                        "in": "path",
+                        "description": "The object ID (GUID) of the target group.",
+                        "name": "object_id",
+                        "required": true,
+                        "type": "string",
+                        "default": "c7ebe5ed-b1d2-4990-88f7-892e4db2e5f3"
+                    },
+                    {
+                        "in": "query",
+                        "description": "The version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "1.6"
+                    },
+
+                    {
+                        "in": "body",
+                        "description": "this is request body, not real parameter",
+                        "name": "bodyparam",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/group",
+                            "example": {
+                                "description": "Example Security Group"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content. Indicates success. No response body is returned.",
+                        "examples": {
+                            "application/json": "none"
+
+                        }
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Write</i></b></p>",
+                "summary": "Change a group's properties.",
+                "operationId": "update group"
+            },
+            "delete": {
+                "parameters": [
+                    {
+                        "in": "path",
+                        "description": "The object ID (GUID) of the target group.",
+                        "name": "object_id",
+                        "required": true,
+                        "type": "string",
+                        "default": "c7ebe5ed-b1d2-4990-88f7-892e4db2e5f3"
+                    },
+                    {
+                        "in": "query",
+                        "description": "Specifies the version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.",
+                        "name": "api-version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.6"
+                    }
+
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content. Indicates success.",
+                        "examples": {
+                            "application/json": "none"
+                        }
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Write</i></b></p>",
+                "summary": "Delete a group. Deleted groups cannot be recovered.",
+                "operationId": "delete group"
+            }
+        },
+        "/groups/{object_id}/$links/members": {
+            "get": {
+                "parameters": [
+                    {
+                        "in": "path",
+                        "description": "The object ID (GUID) of the target group.",
+                        "name": "object_id",
+                        "required": true,
+                        "type": "string",
+                        "default": "b4bda672-1fba-4711-8fb1-5383c40b2c14"
+                    },
+                    {
+                        "in": "query",
+                        "description": "The version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "1.6"
+                    }
+
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK. Indicates success. A collection of links to the group members is returned.",
+                        "examples": {
+                            "application/json": {
+                                "odata.metadata": "https://graph.windows.net/myorganization/$metadata#directoryObjects/$links/members",
+                                "value": [
+                                    {
+                                        "url": "https://graph.windows.net/myorganization/directoryObjects/06adda87-a819-4c2e-ab30-127f308468b5/Microsoft.DirectoryServices.User"
+                                    },
+                                    {
+                                        "url": "https://graph.windows.net/myorganization/directoryObjects/225711c4-501c-4e38-b10c-654a4f62ad67/Microsoft.DirectoryServices.User"
+                                    },
+                                    {
+                                        "url": "https://graph.windows.net/myorganization/directoryObjects/2355eace-6b1d-4560-a481-eddabb529537/Microsoft.DirectoryServices.User"
+                                    },
+                                    {
+                                        "url": "https://graph.windows.net/myorganization/directoryObjects/2b0a2e75-f6f5-498a-9f5c-3543e171a5a6/Microsoft.DirectoryServices.User"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Read</i></b> or <b><i>Contacts.Write</i></b></p>",
+                "summary": "Gets the members of the group by link.",
+                "operationId": "get group members links"
+            },
+            "post": {
+                "parameters": [
+                    {
+                        "in": "path",
+                        "description": "The object ID (GUID) of the target group.",
+                        "name": "object_id",
+                        "required": true,
+                        "type": "string",
+                        "default": "b4bda672-1fba-4711-8fb1-5383c40b2c14"
+                    },
+                    {
+                        "in": "query",
+                        "description": "The version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "1.6"
+                    },
+
+                    {
+                        "in": "body",
+                        "description": "The request body contains one or more links to users, contacts, or groups to add to the group.",
+                        "name": "bodyparam",
+                        "required": true,
+                        "schema": {
+                            "required": [ "url" ],
+                            "properties": {
+                                "url": {
+                                    "type": "string"
+                                }
+                            },
+                            "example": {
+                                "url": "https://graph.windows.net/myorganization/directoryObjects/3eb6055a-baeb-44d4-a1ea-2fee86d8891b"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content. Indicates success. No response body is returned.",
+                        "examples": {
+                            "application/json": "none"
+                        }
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Write</i></b></p>",
+                "summary": "Add members to a group.",
+                "operationId": "add group members"
+            }
+        },
+        "/groups/{object_id}/$links/members/{member_id}": {
+            "delete": {
+                "parameters": [
+                    {
+                        "in": "path",
+                        "description": "The object ID (GUID) of the target group.",
+                        "name": "object_id",
+                        "required": true,
+                        "type": "string",
+                        "default": "b4bda672-1fba-4711-8fb1-5383c40b2c14"
+                    },
+                    {
+                        "in": "path",
+                        "description": "The object ID (GUID) of the member to be removed. Can be a user, a contact, or a group.",
+                        "name": "member_id",
+                        "required": true,
+                        "type": "string",
+                        "default": "3eb6055a-baeb-44d4-a1ea-2fee86d8891b"
+                    },
+                    {
+                        "in": "query",
+                        "description": "The version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "1.6"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content. Indicates success. No response body is returned.",
+                        "examples": {
+                            "application/json": "none"
+                        }
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Write</i></b></p>",
+                "summary": "Delete a user, contact, or group from the group.",
+                "operationId": "delete group member"
+            }
+        },
+        "/groups/{object_id}/$links/memberOf": {
+            "get": {
+                "parameters": [
+                    {
+                        "in": "path",
+                        "description": "The object ID (GUID) of the target group.",
+                        "name": "object_id",
+                        "required": true,
+                        "type": "string",
+                        "default": "b4bda672-1fba-4711-8fb1-5383c40b2c14"
+                    },
+                    {
+                        "in": "query",
+                        "description": "The version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "1.6"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK. Indicates success. One or more groups and/or directory roles are returned.",
+                        "examples": {
+                            "application/json": {
+                                "odata.metadata": "https://graph.windows.net/myorganization/$metadata#directoryObjects/$links/memberOf",
+                                "value": [
+                                    {
+                                        "url": "https://graph.windows.net/myorganization/directoryObjects/c7ebe5ed-b1d2-4990-88f7-892e4db2e5f3/Microsoft.DirectoryServices.Group"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Read</i></b> or <b><i>Contacts.Write</i></b></p>",
+                "summary": "Get a links to the groups and directory roles that the group is a member of.",
+                "operationId": "get group membership links"
+            }
+        }
+    },
+    "host": "graph.windows.net",
+    "basePath": "/myorganization",
+    "schemes": [ "https" ],
+    "definitions": {
+
+        "group": {
+            "required": [
+                "displayName",
+                "mailEnabled",
+                "mailNickname",
+                "securityEnabled"
+            ],
+            "properties": {
+                "objectType": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "objectId": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "deletionTimestamp": {
+                    "type": "date-time",
+                    "readOnly": "true"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "dirSyncEnabled": {
+                    "type": "boolean",
+                    "readOnly": "true"
+                },
+                "displayName": {
+                    "type": "string",
+                    "required": "true"
+                },
+                "lastDirSyncTime": {
+                    "type": "date-time",
+                    "readOnly": "true"
+                },
+                "mail": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "mailEnabled": {
+                    "type": "boolean",
+                    "required": "true"
+                },
+                "mailNickname": {
+                    "type": "string",
+                    "required": "true"
+                },
+                "onPremisesSecurityIdentifier": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "provisioningErrors": {
+                    "type": "array",
+                    "items": {
+                        "schema": {
+                            "$ref": "#/definitions/ProvisioningError"
+                        }
+                    },
+                    "readOnly": "true"
+
+                },
+                "proxyAddresses": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "readOnly": "true",
+                    "example": {
+                        "proxyAddresses": [
+                            "SMTP:garthf@a830edad9050849NDA1.onmicrosoft.com"
+                        ]
+                    }
+                },
+                "securityEnabled": {
+                    "type": "boolean",
+                    "required": "true"
+                }
+            }
+        },
+        "ProvisioningError": {
+            "properties": {
+                "errorDetail": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "resolved": {
+                    "type": "boolean",
+                    "readOnly": "true"
+                },
+                "serviceInstance": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "timestamp": {
+                    "type": "date-time",
+                    "readOnly": "true"
+                }
+            }
+        }
+    }
+}

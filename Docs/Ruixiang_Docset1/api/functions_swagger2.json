@@ -1,0 +1,1019 @@
+﻿{
+    "swagger": "2.0",
+    "info": {
+        "title": "Functions"
+    },
+    "paths": {
+        "/getAvailableExtensionProperties": {
+            "post": {
+                "parameters": [
+                    {
+                        "in": "query",
+                        "description": "The version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "1.6"
+                    },
+
+                    {
+                        "in": "body",
+                        "description": "this is request body, not real parameter",
+                        "name": "bodyparam",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/getAvailableExtensionPropertiesRequestBody",
+                            "example": {
+                                "isSyncedFromOnPremises": false
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK. Indicates success. A collection that contains the extension properties is returned.",
+                        "examples": {
+                            "application/json": {
+                                "odata.metadata": "https://graph.windows.net/myorganization/$metadata#directoryObjects",
+                                "value": [
+                                    {
+                                        "odata.type": "Microsoft.DirectoryServices.ExtensionProperty",
+                                        "objectType": "ExtensionProperty",
+                                        "objectId": "d6a8bfec-893d-46e4-88fd-7db5fcc0fa62",
+                                        "deletionTimestamp": null,
+                                        "appDisplayName": "SampleApp",
+                                        "name": "extension_4d405aa8baa04fb494d3e0571fd9fd71_skypeId",
+                                        "dataType": "String",
+                                        "isSyncedFromOnPremises": false,
+                                        "targetObjects": [
+                                            "User"
+                                        ]
+                                    }
+                                ]
+                            }
+
+                        }
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Write</i></b></p>",
+                "summary": "Get the extension properties registered for the tenant.",
+                "operationId": "getAvailableExtensionProperties"
+            }
+        },
+        "/getObjectsByObjectIds": {
+            "post": {
+                "parameters": [
+                    {
+                        "in": "query",
+                        "description": "The version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "1.6"
+                    },
+
+                    {
+                        "in": "body",
+                        "description": "this is request body, not real parameter",
+                        "name": "bodyparam",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/getObjectsByObjectIdsRequestBody",
+                            "example": {
+                                "objectIds": [
+                                    "c57cdc98-0dcd-4f90-a82f-c911b288bab9",
+                                    "cc9869f0-6ac0-4d00-bc24-621a2d949d35",
+                                    "477c2fe9-b0e7-4661-8564-ba170666f058",
+                                    "beb9a3bb-2fff-4d5f-99d8-0ce169e8bed7"
+                                ],
+                                "types": [ "group" ]
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK. Indicates success. A collection that contains the directory objects that match the search criterea is returned.",
+                        "examples": {
+                            "application/json": {
+                                "odata.metadata": "https://graph.windows.net/myorganization/$metadata#directoryObjects",
+                                "value": [
+                                    {
+                                        "odata.type": "Microsoft.DirectoryServices.Group",
+                                        "objectType": "Group",
+                                        "objectId": "c57cdc98-0dcd-4f90-a82f-c911b288bab9",
+                                        "deletionTimestamp": null,
+                                        "description": "Marketing Group",
+                                        "dirSyncEnabled": null,
+                                        "displayName": "Marketing",
+                                        "lastDirSyncTime": null,
+                                        "mail": null,
+                                        "mailNickname": "cdf76b17-0734-41bc-9c24-9a7af93f3502",
+                                        "mailEnabled": false,
+                                        "onPremisesSecurityIdentifier": null,
+                                        "provisioningErrors": [
+
+                                        ],
+                                        "proxyAddresses": [
+
+                                        ],
+                                        "securityEnabled": true
+                                    },
+                                    {
+                                        "odata.type": "Microsoft.DirectoryServices.Group",
+                                        "objectType": "Group",
+                                        "objectId": "cc9869f0-6ac0-4d00-bc24-621a2d949d35",
+                                        "deletionTimestamp": null,
+                                        "description": "Engineering Group",
+                                        "dirSyncEnabled": null,
+                                        "displayName": "Engineering",
+                                        "lastDirSyncTime": null,
+                                        "mail": null,
+                                        "mailNickname": "ef3b8cc1-721b-4452-9e30-9867d1de80ea",
+                                        "mailEnabled": false,
+                                        "onPremisesSecurityIdentifier": null,
+                                        "provisioningErrors": [
+
+                                        ],
+                                        "proxyAddresses": [
+
+                                        ],
+                                        "securityEnabled": true
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Write</i></b></p>",
+                "summary": "Return directory objects from a list of object IDs qualified by type criterea.",
+                "operationId": "getObjectsByObjectIds"
+            }
+        },
+        "/isMemberOf": {
+            "post": {
+                "parameters": [
+                    {
+                        "in": "query",
+                        "description": "The version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "1.6"
+                    },
+
+                    {
+                        "in": "body",
+                        "description": "this is request body, not real parameter",
+                        "name": "bodyparam",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/isMemberOfRequestBody",
+                            "example": {
+                                "groupId": "5e624f44-d38d-4943-b07c-2bad078f52ff",
+                                "memberId": "ea59e4d3-a7a1-4b5b-b65f-a25fcc0c0f99"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK. Indicates success. Returns true if the user, contact, group, or service principal is a member of the specified group; otherwsie, false.",
+                        "examples": {
+                            "application/json": {
+                                "odata.metadata": "https://graph.windows.net/myorganization/$metadata#Edm.Boolean",
+                                "value": true
+                            }
+
+                        }
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Write</i></b></p>",
+                "summary": "Check a user, conatact, group, or service principal for membership in a specified group.",
+                "operationId": "isMemberOf"
+            }
+        },
+        "/deletedApplications/{application_id}/restore": {
+            "post": {
+                "parameters": [
+                    {
+                        "in": "path",
+                        "description": "The object ID (GUID) of the application to restore.",
+                        "name": "application_id",
+                        "required": true,
+                        "type": "string",
+                        "default": "1e22de0f-0ed1-4c01-b725-a822632467e3"
+                    },
+                    {
+                        "in": "query",
+                        "description": "The version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "1.6"
+                    },
+
+                    {
+                        "in": "body",
+                        "description": "this is request body, not real parameter",
+                        "name": "bodyparam",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/restore",
+                            "example": {
+                                "identifierUris": [ "https://restoredApp/" ]
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK. Indicates success. Returns the restored Application object. The identifierUris property in the restored application is set or restored according to the identifierUris collection specified in the request.",
+                        "examples": {
+                            "application/json": {
+                                "odata.metadata": "https://graph.windows.net/myorganization/$metadata#directoryObjects/Microsoft.DirectoryServices.Application/@Element",
+                                "odata.type": "Microsoft.DirectoryServices.Application",
+                                "objectType": "Application",
+                                "objectId": "1e22de0f-0ed1-4c01-b725-a822632467e3",
+                                "deletionTimestamp": null,
+                                "appId": "f4ecf40c-e94f-4d79-af83-f920f81bcb66",
+                                "appRoles": [
+
+                                ],
+                                "availableToOtherTenants": false,
+                                "displayName": "Sample App 1",
+                                "errorUrl": null,
+                                "groupMembershipClaims": null,
+                                "homepage": "https://localhost",
+                                "identifierUris": [
+                                    "https://restoredApp/"
+                                ],
+                                "keyCredentials": [
+
+                                ],
+                                "knownClientApplications": [
+
+                                ],
+                                "logoutUrl": null,
+                                "oauth2AllowImplicitFlow": false,
+                                "oauth2AllowUrlPathMatching": false,
+                                "oauth2Permissions": [
+
+                                ],
+                                "oauth2RequirePostResponse": false,
+                                "passwordCredentials": [
+
+                                ],
+                                "publicClient": null,
+                                "replyUrls": [
+                                    "https://localhost"
+                                ],
+                                "requiredResourceAccess": [
+                                    {
+                                        "resourceAppId": "00000002-0000-0000-c000-000000000000",
+                                        "resourceAccess": [
+                                            {
+                                                "id": "311a71cc-e848-46a1-bdf8-97ff7156d8e6",
+                                                "type": "Scope"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "samlMetadataUrl": null
+                            }
+                        }
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Write</i></b></p>",
+                "summary": "Restore a deleted application.",
+                "operationId": "restore"
+            }
+        },
+        "/users/{user_id}/assignLicense": {
+            "post": {
+                "parameters": [
+                    {
+                        "in": "path",
+                        "description": "The user ID. Can be the object ID (GUID) or the user principal name (someuser@a830edad9050849NDA1.onmicrosoft.com) of the target user.",
+                        "name": "user_id",
+                        "required": true,
+                        "type": "string",
+                        "default": "alexd@a830edad9050849NDA1.onmicrosoft.com"
+                    },
+                    {
+                        "in": "query",
+                        "description": "The version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "1.6"
+                    },
+
+                    {
+                        "in": "body",
+                        "description": "this is request body, not real parameter",
+                        "name": "bodyparam",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/assignLicenseRequestBody",
+                            "example": {
+                                "addLicenses": [ { "disabledPlans": [ ], "skuId": "6fd2c87f-b296-42f0-b197-1e91e994b900" } ],
+                                "removeLicenses": [ ]
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK. Indicates success. No response body is returned.",
+                        "examples": {
+                            "application/json": "none"
+
+                        }
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Write</i></b></p>",
+                "summary": "Assign or remove licenses for a user.",
+                "operationId": "assignLicense"
+            }
+        },
+        "/domains({domain_name})/verify": {
+            "post": {
+                "parameters": [
+                    {
+                        "in": "path",
+                        "description": "The fully qualified domain name of the target domain. Must be enclosed in single quotes.",
+                        "name": "domain_name",
+                        "required": true,
+                        "type": "string",
+                        "default": "\'contoso.com\'"
+                    },
+                    {
+                        "in": "query",
+                        "description": "The version of the Graph API to target. Only 'beta' is supported. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "beta"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK. Indicates success. Returns the Domain object. The isVerified property indicates whether the ownership of the domain has been verified successfully.",
+                        "examples": {
+                            "application/json": {
+                                "odata.metadata": "https://graph.windows.net/myorganization/$metadata#domains/@Element",
+                                "authenticationType": "Managed",
+                                "availabilityStatus": "AvailableImmediately",
+                                "isAdminManaged": true,
+                                "isDefault": false,
+                                "isInitial": false,
+                                "isRoot": true,
+                                "isVerified": true,
+                                "name": "contoso.com",
+                                "supportedServices": [ ]
+                            }
+                        }
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Write</i></b></p>",
+                "summary": "Validate the ownership of a domain.",
+                "operationId": "verify"
+            }
+        },
+        "/{resource_collection}/{resource_id}/checkMemberGroups": {
+            "post": {
+                "parameters": [
+                    {
+                        "in": "path",
+                        "description": "Specifies the resource collection to target. Acceptable values are users, groups, contacts, and servicePrincipals.",
+                        "name": "resource_collection",
+                        "required": true,
+                        "type": "string",
+                        "default": "users"
+                    },
+                    {
+                        "in": "path",
+                        "description": "Specifies the user, contact, group, or service principal for which membership is to be checked. For contacts, groups, and service principals the entity-identifier should be an object ID (GUID); for users, it can be either the object ID or the user principal name (UPN)..",
+                        "name": "resource_id",
+                        "required": true,
+                        "type": "string",
+                        "default": "alexd@a830edad9050849NDA1.onmicrosoft.com"
+                    },
+                    {
+                        "in": "query",
+                        "description": "The version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "1.6"
+                    },
+
+                    {
+                        "in": "body",
+                        "description": "this is request body, not real parameter",
+                        "name": "bodyparam",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/checkMemberGroupsRequestBody",
+                            "example": {
+                                "groupIds": [
+                                    "8ab3f116-1afb-44cb-8e61-6b20cb1e353c",
+                                    "be78b7e2-a94a-4ab0-9bb4-403977cc7ec6",
+                                    "cf61b8c9-3626-4fe4-b2f7-ac31fa905605"
+                                ]
+                            }
+
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK. Indicates success. The object IDs of the groups in the request that the target user, contact, group, or service principal has either direct or transitive  membership in are returned. ",
+                        "examples": {
+                            "application/json": {
+                                "odata.metadata": "https://graph.windows.net/myorganization/$metadata#Collection(Edm.String)",
+                                "value": [
+                                    "8ab3f116-1afb-44cb-8e61-6b20cb1e353c",
+                                    "be78b7e2-a94a-4ab0-9bb4-403977cc7ec6"
+                                ]
+                            }
+                        }
+
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Write</i></b></p>",
+                "summary": "Check group membership for a user, contact, group, or service principal.",
+                "operationId": "checkMemberGroups"
+            }
+        },
+        "/{resource_collection}/{resource_id}/getMemberGroups": {
+            "post": {
+                "parameters": [
+                    {
+                        "in": "path",
+                        "description": "Specifies the resource collection to target. Acceptable values are users, groups, contacts, and servicePrincipals.",
+                        "name": "resource_collection",
+                        "required": true,
+                        "type": "string",
+                        "default": "users"
+                    },
+                    {
+                        "in": "path",
+                        "description": "Specifies the user, contact, group, or service principal for which group memberships are to be returned. For contacts, groups, and service principals the entity-identifier should be an object ID (GUID); for users, it can be either the object ID or the user principal name (UPN)..",
+                        "name": "resource_id",
+                        "required": true,
+                        "type": "string",
+                        "default": "alexd@a830edad9050849NDA1.onmicrosoft.com"
+                    },
+                    {
+                        "in": "query",
+                        "description": "The version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "1.6"
+                    },
+
+                    {
+                        "in": "body",
+                        "description": "this is request body, not real parameter",
+                        "name": "bodyparam",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/getMemberGroupsRequestBody",
+                            "example": {
+                                "securityEnabledOnly": false
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK. Indicates success. The object IDs of the groups that the target user, contact, group, or service principal has either direct or transitive  membership in are returned. ",
+                        "examples": {
+                            "application/json": {
+                                "odata.metadata": "https://graph.windows.net/myorganization/$metadata#Collection(Edm.String)",
+                                "value": [
+                                    "8ab3f116-1afb-44cb-8e61-6b20cb1e353c",
+                                    "be78b7e2-a94a-4ab0-9bb4-403977cc7ec6",
+                                    "5e624f44-d38d-4943-b07c-2bad078f52ff"
+                                ]
+                            }
+
+                        }
+
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Write</i></b></p>",
+                "summary": "Get group membership for a user, contact, group, or service principal.",
+                "operationId": "getMemberGroups"
+            }
+        },
+        "/{resource_collection}/{resource_id}/getMemberObjects": {
+            "post": {
+                "parameters": [
+                    {
+                        "in": "path",
+                        "description": "Specifies the resource collection to target. Acceptable values are users, groups, contacts, and servicePrincipals.",
+                        "name": "resource_collection",
+                        "required": true,
+                        "type": "string",
+                        "default": "users"
+                    },
+                    {
+                        "in": "path",
+                        "description": "Specifies the user, contact, group, or service principal for which group and directory role memberships are to be returned. For contacts, groups, and service principals the entity-identifier should be an object ID (GUID); for users, it can be either the object ID or the user principal name (UPN)..",
+                        "name": "resource_id",
+                        "required": true,
+                        "type": "string",
+                        "default": "alexd@a830edad9050849NDA1.onmicrosoft.com"
+                    },
+                    {
+                        "in": "query",
+                        "description": "The version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "1.6"
+                    },
+
+                    {
+                        "in": "body",
+                        "description": "this is request body, not real parameter",
+                        "name": "bodyparam",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/getMemberObjectsRequestBody",
+                            "example": {
+                                "securityEnabledOnly": false
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK. Indicates success. The object IDs of the groups and directory roles that the target user, contact, group, or service principal has either direct or transitive  membership in are returned. ",
+                        "examples": {
+                            "application/json": {
+                                "odata.metadata": "https://graph.windows.net/myortanization/$metadata#Collection(Edm.String)",
+                                "value": [
+                                    "8ab3f116-1afb-44cb-8e61-6b20cb1e353c",
+                                    "be78b7e2-a94a-4ab0-9bb4-403977cc7ec6",
+                                    "5e624f44-d38d-4943-b07c-2bad078f52ff"
+                                ]
+                            }
+
+                        }
+
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Write</i></b></p>",
+                "summary": "Get group and directory role memberships for a user, contact, group, or service principal.",
+                "operationId": "getMemberObjects"
+            }
+        }
+    },
+    "host": "graph.windows.net",
+    "basePath": "/myorganization",
+    "schemes": [ "https" ],
+    "definitions": {
+        "assignLicenseRequestBody": {
+            "properties": {
+                "addLicenses": {
+                    "schema": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/definitions/AssignedLicense",
+                            "example": {
+                                "addLicenses": [
+                                    {
+                                        "disabledPlans": [ ],
+                                        "skuId": "6fd2c87f-b296-42f0-b197-1e91e994b900"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "removeLicenses": {
+                    "schema": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "checkMemberGroupsRequestBody": {
+            "properties": {
+                "groupIds": {
+                    "schema": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "getAvailableExtensionPropertiesRequestBody": {
+            "properties": {
+                "isSyncedFromOnPremises": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "getMemberGroupsRequestBody": {
+            "properties": {
+                "securityEnabledOnly": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "getMemberObjectsRequestBody": {
+            "properties": {
+                "securityEnabledOnly": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "getObjectsByObjectIdsRequestBody": {
+            "properties": {
+                "objectIds": {
+                    "schema": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "types": {
+                    "schema": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "isMemberOfRequestBody": {
+            "properties": {
+                "groupId": {
+                    "type": "string"
+                },
+                "memberId": {
+                    "type": "string"
+                }
+            }
+        },
+        "restore": {
+            "properties": {
+                "identifiersUris": {
+                    "schema": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "user": {
+            "required": [
+                "accountEnabled",
+                "displayName",
+                "passwordProfile"
+            ],
+            "properties": {
+                "objectType": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "objectId": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "deletionTimestamp": {
+                    "type": "date-time",
+                    "readOnly": "true"
+                },
+                "accountEnabled": {
+                    "type": "boolean"
+                },
+                "assignedLicenses": {
+                    "schema": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/definitions/AssignedLicense",
+                            "example": {
+                                "assignedLicenses": [
+                                    {
+                                        "disabledPlans": [ ],
+                                        "skuId": "6fd2c87f-b296-42f0-b197-1e91e994b900"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "assignedPlans": {
+                    "schema": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/definitions/AssignedPlan",
+                            "example": {
+                                "assignedPlans": [
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "exchange",
+                                        "servicePlanId": "efb87545-963c-4e0d-99df-69c6916d9eb0"
+                                    },
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "SharePoint",
+                                        "servicePlanId": "5dbe027f-2339-4123-9542-606e4d348a72"
+                                    },
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "SharePoint",
+                                        "servicePlanId": "e95bec33-7c88-4a70-8e19-b10bd9d0c014"
+                                    },
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "MicrosoftCommunicationsOnline",
+                                        "servicePlanId": "0feaeb32-d00e-4d66-bd5a-43b5b83db82c"
+                                    },
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "MicrosoftOffice",
+                                        "servicePlanId": "43de0ff5-c92c-492b-9116-175376d08c38"
+                                    },
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "RMSOnline",
+                                        "servicePlanId": "bea4c11e-220a-4e6d-8eb8-8ea15d019f90"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "city": {
+                    "type": "string"
+                },
+                "country": {
+                    "type": "string"
+                },
+                "department": {
+                    "type": "string"
+                },
+                "dirSyncEnabled": {
+                    "type": "boolean"
+                },
+                "displayName": {
+                    "type": "string",
+                    "required": "true"
+                },
+                "facsimileTelephoneNumber": {
+                    "type": "string"
+                },
+                "givenName": {
+                    "type": "string"
+                },
+                "immutableId": {
+                    "type": "string"
+                },
+                "jobTitle": {
+                    "type": "string"
+                },
+                "lastDirSyncTime": {
+                    "type": "date-time",
+                    "readOnly": "true"
+                },
+                "mail": {
+                    "type": "string"
+                },
+                "mailNickname": {
+                    "type": "string"
+                },
+                "mobile": {
+                    "type": "string"
+                },
+                "onPremisesSecurityIdentifier": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "otherMails": {
+                    "schema": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "passwordPolicies": {
+                    "type": "string"
+                },
+                "passwordProfile": {
+                    "schema": {
+                        "$ref": "#/definitions/PasswordProfile"
+                    },
+                    "required": "true",
+                    "example": {
+                        "passwordProfile": {
+                            "password": "StrongPassword1!"
+                        }
+                    }
+                },
+                "physicalDeliveryOfficeName": {
+                    "type": "string"
+                },
+                "postalCode": {
+                    "type": "string"
+                },
+                "preferredLanguage": {
+                    "type": "string"
+                },
+                "provisionedPlans": {
+                    "type": "array",
+                    "items": {
+                        "schema": {
+                            "$ref": "#/definitions/ProvisionedPlan"
+                        }
+                    },
+                    "readOnly": "true",
+                    "example": {
+                        "provisionedPlans": [
+                            {
+                                "capabilityStatus": "Enabled",
+                                "provisioningStatus": "Success",
+                                "service": "exchange"
+                            },
+                            {
+                                "capabilityStatus": "Enabled",
+                                "provisioningStatus": "Success",
+                                "service": "MicrosoftCommunicationsOnline"
+                            },
+                            {
+                                "capabilityStatus": "Enabled",
+                                "provisioningStatus": "Success",
+                                "service": "SharePoint"
+                            },
+                            {
+                                "capabilityStatus": "Enabled",
+                                "provisioningStatus": "Success",
+                                "service": "SharePoint"
+                            },
+                            {
+                                "capabilityStatus": "Enabled",
+                                "provisioningStatus": "Success",
+                                "service": "MicrosoftOffice"
+                            }
+                        ]
+                    }
+
+                },
+                "provisioningErrors": {
+                    "type": "array",
+                    "items": {
+                        "schema": {
+                            "$ref": "#/definitions/ProvisioningError"
+                        }
+                    },
+                    "readOnly": "true"
+
+                },
+                "proxyAddresses": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "readOnly": "true",
+                    "example": {
+                        "proxyAddresses": [
+                            "SMTP:garthf@a830edad9050849NDA1.onmicrosoft.com"
+                        ]
+                    }
+                },
+                "sipProxyAddress": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "streetAddress": {
+                    "type": "string"
+                },
+                "surname": {
+                    "type": "string"
+                },
+                "telephoneNumber": {
+                    "type": "string"
+                },
+                "usageLocation": {
+                    "type": "string"
+                },
+                "userPrincipalName": {
+                    "type": "string",
+                    "required": "true"
+                },
+                "userType": {
+                    "type": "string"
+                }
+            }
+        },
+        "AssignedLicense": {
+            "properties": {
+                "disabledPlans": {
+                    "type": "array",
+                    "items": {
+                        "type": "guid"
+                    },
+                    "readOnly": "true"
+                },
+                "skuId": {
+                    "type": "guid",
+                    "readOnly": "true"
+                }
+
+            }
+        },
+        "AssignedPlan": {
+            "properties": {
+                "assignedTimeStamp": {
+                    "type": "date-time",
+                    "readOnly": "true"
+                },
+                "capabilityStatus": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "service": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "servicePlanId": {
+                    "type": "guid",
+                    "readOnly": "true"
+                }
+            }
+        },
+        "PasswordProfile": {
+            "properties": {
+                "password": {
+                    "type": "string",
+                    "required": "true"
+                },
+                "forceChangePasswordNextLogin": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "ProvisionedPlan": {
+            "properties": {
+                "capabilityStatus": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "provisioningStatus": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "service": {
+                    "type": "string",
+                    "readOnly": "true"
+                }
+            }
+        },
+        "ProvisioningError": {
+            "properties": {
+                "errorDetail": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "resolved": {
+                    "type": "boolean",
+                    "readOnly": "true"
+                },
+                "serviceInstance": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "timestamp": {
+                    "type": "date-time",
+                    "readOnly": "true"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,513 @@
+﻿{
+    "swagger": "2.0",
+    "info": {
+        "title": "Users2"
+    },
+    "paths": {
+        "/users": {
+            "post": {
+                "parameters": [
+                    {
+                        "in": "query",
+                        "description": "The version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "1.6"
+                    },
+                    {
+                        "in": "body",
+                        "description": "The request body, not a real parameter",
+                        "name": "bodyparam",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/user",
+                            "example": {
+                                "accountEnabled": true,
+                                "creationType": "LocalAccount",
+                                "displayName": "Alex Wu",
+                                "passwordProfile": { "password": "Test1234", "forceChangePasswordNextLogin": false },
+                                "signInNames": [
+                                    {
+                                        "type": "userName",
+                                        "value": "AlexW"
+                                    },
+                                    {
+                                        "type": "emailAddress",
+                                        "value": "AlexW@example.com"
+                                    }
+                                ],
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created. Indicates success. The new user is returned in the response body.",
+                        "examples": {
+                            "application/json": {
+                                "odata.metadata": "https://graph.windows.net/myorganization/$metadata#directoryObjects/Microsoft.DirectoryServices.User/@Element",
+                                "odata.type": "Microsoft.DirectoryServices.User",
+                                "objectType": "User",
+                                "objectId": "84fba1e8-b942-47c9-a10e-a4bee353ce60",
+                                "deletionTimestamp": null,
+                                "accountEnabled": true,
+                                "signInNames": [
+                                    {
+                                        "type": "userName",
+                                        "value": "AlexW"
+                                    },
+                                    {
+                                        "type": "emailAddress",
+                                        "value": "AlexW@example.com"
+                                    }
+                                ],
+                                "assignedLicenses": [
+
+                                ],
+                                "assignedPlans": [
+
+                                ],
+                                "city": null,
+                                "country": null,
+                                "creationType": "LocalAccount",
+                                "department": null,
+                                "dirSyncEnabled": null,
+                                "displayName": "Alex Wu",
+                                "facsimileTelephoneNumber": null,
+                                "givenName": null,
+                                "immutableId": null,
+                                "jobTitle": null,
+                                "lastDirSyncTime": null,
+                                "mail": null,
+                                "mailNickname": "AlexW_example.com#EXT#",
+                                "mobile": null,
+                                "onPremisesSecurityIdentifier": null,
+                                "otherMails": [
+
+                                ],
+                                "passwordPolicies": null,
+                                "passwordProfile": null,
+                                "physicalDeliveryOfficeName": null,
+                                "postalCode": null,
+                                "preferredLanguage": null,
+                                "provisionedPlans": [
+
+                                ],
+                                "provisioningErrors": [
+
+                                ],
+                                "proxyAddresses": [
+
+                                ],
+                                "sipProxyAddress": null,
+                                "state": null,
+                                "streetAddress": null,
+                                "surname": null,
+                                "telephoneNumber": null,
+                                "usageLocation": null,
+                                "userPrincipalName": "AlexW_example.com#EXT#@a830edad9050849NDA1.com",
+                                "userType": "Member"
+                            }
+                        }
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Directory.Write</i></b></p>",
+                "summary": "Add a local account user to an Azure AD B2C tenant.",
+                "operationId": "create local account user"
+            }
+
+        },
+        "/users/{user_id}": {
+            "patch": {
+                "parameters": [
+                    {
+                        "in": "path",
+                        "description": "The user ID. Can be the object ID (GUID) or the user principal name (someuser@a830edad9050849NDA1.onmicrosoft.com) of the target user.",
+                        "name": "user_id",
+                        "required": true,
+                        "type": "string",
+                        "default": "alexd@a830edad9050849NDA1.onmicrosoft.com"
+                    },
+                    {
+                        "in": "query",
+                        "description": "The version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "1.6"
+                    },
+
+                    {
+                        "in": "body",
+                        "description": "this is request body, not real parameter",
+                        "name": "bodyparam",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/PasswordProfile",
+                            "example": {
+                                "passwordProfile": {
+                                    "password": "Test123456",
+                                    "forceChangePasswordNextLogin": false
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content. Indicates success. No response body is returned.",
+                        "examples": {
+                            "application/json": "none"
+
+                        }
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Write</i></b></p>",
+                "summary": "Reset a user's password.",
+                "operationId": "reset user password"
+            }
+        }
+
+    },
+    "host": "graph.windows.net",
+    "basePath": "/myorganization",
+    "schemes": [ "https" ],
+    "definitions": {
+
+        "user": {
+            "required": [
+                "accountEnabled",
+                "displayName",
+                "passwordProfile"
+            ],
+            "properties": {
+                "objectType": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "objectId": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "deletionTimestamp": {
+                    "type": "date-time",
+                    "readOnly": "true"
+                },
+                "accountEnabled": {
+                    "type": "boolean"
+                },
+                "assignedLicenses": {
+                    "schema": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/definitions/AssignedLicense",
+                            "example": {
+                                "assignedLicenses": [
+                                    {
+                                        "disabledPlans": [ ],
+                                        "skuId": "6fd2c87f-b296-42f0-b197-1e91e994b900"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "assignedPlans": {
+                    "schema": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/definitions/AssignedPlan",
+                            "example": {
+                                "assignedPlans": [
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "exchange",
+                                        "servicePlanId": "efb87545-963c-4e0d-99df-69c6916d9eb0"
+                                    },
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "SharePoint",
+                                        "servicePlanId": "5dbe027f-2339-4123-9542-606e4d348a72"
+                                    },
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "SharePoint",
+                                        "servicePlanId": "e95bec33-7c88-4a70-8e19-b10bd9d0c014"
+                                    },
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "MicrosoftCommunicationsOnline",
+                                        "servicePlanId": "0feaeb32-d00e-4d66-bd5a-43b5b83db82c"
+                                    },
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "MicrosoftOffice",
+                                        "servicePlanId": "43de0ff5-c92c-492b-9116-175376d08c38"
+                                    },
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "RMSOnline",
+                                        "servicePlanId": "bea4c11e-220a-4e6d-8eb8-8ea15d019f90"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "city": {
+                    "type": "string"
+                },
+                "country": {
+                    "type": "string"
+                },
+                "department": {
+                    "type": "string"
+                },
+                "dirSyncEnabled": {
+                    "type": "boolean"
+                },
+                "displayName": {
+                    "type": "string",
+                    "required": "true"
+                },
+                "facsimileTelephoneNumber": {
+                    "type": "string"
+                },
+                "givenName": {
+                    "type": "string"
+                },
+                "immutableId": {
+                    "type": "string"
+                },
+                "jobTitle": {
+                    "type": "string"
+                },
+                "lastDirSyncTime": {
+                    "type": "date-time",
+                    "readOnly": "true"
+                },
+                "mail": {
+                    "type": "string"
+                },
+                "mailNickname": {
+                    "type": "string"
+                },
+                "mobile": {
+                    "type": "string"
+                },
+                "onPremisesSecurityIdentifier": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "otherMails": {
+                    "schema": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "passwordPolicies": {
+                    "type": "string"
+                },
+                "passwordProfile": {
+                    "schema": {
+                        "$ref": "#/definitions/PasswordProfile"
+                    },
+                    "required": "true",
+                    "example": {
+                        "passwordProfile": {
+                            "password": "StrongPassword1!"
+                        }
+                    }
+                },
+                "physicalDeliveryOfficeName": {
+                    "type": "string"
+                },
+                "postalCode": {
+                    "type": "string"
+                },
+                "preferredLanguage": {
+                    "type": "string"
+                },
+                "provisionedPlans": {
+                    "type": "array",
+                    "items": {
+                        "schema": {
+                            "$ref": "#/definitions/ProvisionedPlan"
+                        }
+                    },
+                    "readOnly": "true",
+                    "example": {
+                        "provisionedPlans": [
+                            {
+                                "capabilityStatus": "Enabled",
+                                "provisioningStatus": "Success",
+                                "service": "exchange"
+                            },
+                            {
+                                "capabilityStatus": "Enabled",
+                                "provisioningStatus": "Success",
+                                "service": "MicrosoftCommunicationsOnline"
+                            },
+                            {
+                                "capabilityStatus": "Enabled",
+                                "provisioningStatus": "Success",
+                                "service": "SharePoint"
+                            },
+                            {
+                                "capabilityStatus": "Enabled",
+                                "provisioningStatus": "Success",
+                                "service": "SharePoint"
+                            },
+                            {
+                                "capabilityStatus": "Enabled",
+                                "provisioningStatus": "Success",
+                                "service": "MicrosoftOffice"
+                            }
+                        ]
+                    }
+
+                },
+                "provisioningErrors": {
+                    "type": "array",
+                    "items": {
+                        "schema": {
+                            "$ref": "#/definitions/ProvisioningError"
+                        }
+                    },
+                    "readOnly": "true"
+
+                },
+                "proxyAddresses": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "readOnly": "true",
+                    "example": {
+                        "proxyAddresses": [
+                            "SMTP:garthf@a830edad9050849NDA1.onmicrosoft.com"
+                        ]
+                    }
+                },
+                "sipProxyAddress": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "streetAddress": {
+                    "type": "string"
+                },
+                "surname": {
+                    "type": "string"
+                },
+                "telephoneNumber": {
+                    "type": "string"
+                },
+                "usageLocation": {
+                    "type": "string"
+                },
+                "userPrincipalName": {
+                    "type": "string",
+                    "required": "true"
+                },
+                "userType": {
+                    "type": "string"
+                }
+            }
+        },
+        "AssignedLicense": {
+            "properties": {
+                "disabledPlans": {
+                    "type": "array",
+                    "items": {
+                        "type": "guid"
+                    },
+                    "readOnly": "true"
+                },
+                "skuId": {
+                    "type": "guid",
+                    "readOnly": "true"
+                }
+
+            }
+        },
+        "AssignedPlan": {
+            "properties": {
+                "assignedTimeStamp": {
+                    "type": "date-time",
+                    "readOnly": "true"
+                },
+                "capabilityStatus": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "service": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "servicePlanId": {
+                    "type": "guid",
+                    "readOnly": "true"
+                }
+            }
+        },
+        "PasswordProfile": {
+            "properties": {
+                "password": {
+                    "type": "string",
+                    "required": "true"
+                },
+                "forceChangePasswordNextLogin": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "ProvisionedPlan": {
+            "properties": {
+                "capabilityStatus": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "provisioningStatus": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "service": {
+                    "type": "string",
+                    "readOnly": "true"
+                }
+            }
+        },
+        "ProvisioningError": {
+            "properties": {
+                "errorDetail": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "resolved": {
+                    "type": "boolean",
+                    "readOnly": "true"
+                },
+                "serviceInstance": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "timestamp": {
+                    "type": "date-time",
+                    "readOnly": "true"
+                }
+            }
+        }
+    }
+}
