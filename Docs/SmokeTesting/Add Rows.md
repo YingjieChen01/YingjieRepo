@@ -2,7 +2,6 @@
 
 *Append rows of second input dataset to the end of the first dataset*
 
-Category: [Data Transformation\Manipulation](92B32033-F75F-4854-AC8F-9110B3FE7E09)
 
 
 ## Module Overview

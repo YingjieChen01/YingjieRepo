@@ -23,7 +23,7 @@
 ## [Operations on domains (preview)](api/domains-operations.md)
 # [Graph API Reference](api/api-catalog.md)
 ## [Operations on the signed-in user](api/signed-in-user-operations.md)
-## [Operations on users](api/users-operations.md)
+## [Operations on users](User/users-operations.md)
 ## [Operations on groups](api/groups-operations.md)
 ## [Operations on contacts](api/contacts-operations.md)
 ## [Operations on directory roles](api/directoryroles-operations.md)
