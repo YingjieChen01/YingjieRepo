@@ -10,6 +10,7 @@
 ## [Article03](5714a225-befd-438a-9bb5-f6fdc50a4efb.md)
 ## [Article04](77443F05-E1C3-47FC-9167-963B2703936D.md)
 ## [Article05](b2ebdabd-217d-4915-86cc-5b05972f7270.md)
+## [Article06](51ea9ea4-4b1c-4b0a-9a6d-f69e73382bb6.md)
 # Graph API Concepts
 ## [Azure AD Graph API (on Azure.com)](https://azure.microsoft.com/documentation/articles/active-directory-graph-api)
 ## [Quickstart for the Graph API (on Azure.com)](https://azure.microsoft.com/documentation/articles/active-directory-graph-api-quickstart)
