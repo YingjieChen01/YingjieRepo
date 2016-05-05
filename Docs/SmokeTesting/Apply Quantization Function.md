@@ -6,7 +6,7 @@ Category: [Deprecated](27565421-8F99-41A5-9B76-241B103E4E88)
 
 
 ## Module Overview
-[!INCLUDE[M_ApplyQuantizationFunction](Token\M_ApplyQuantizationFunction.md)] returns a dataset where each element has been binned 
+returns a dataset where each element has been binned 
 according to the specified mode. It also returns a function that can be passed to
 Apply Quantization Function module to bin new samples of data using the
 same binning mode and parameters.
@@ -23,7 +23,7 @@ the element would be mapped to bin number 2. Value 0.5 would be mapped to bin nu
 The binning mode specifies how the bin edges are determined:
 
 
--   **[!INCLUDE[T_QuantizationMode.Quantiles](Token\T_QuantizationMode.Quantiles.md)]**
+- 
     
     The data is binned so as to make
 distribution across bins equal\-height. Parameter “Number of bins”
@@ -33,17 +33,17 @@ must be specified
 This parameter determines the normalization: \[1,number of bins],
 \[0,1] or \[0,100]
 
--   **[!INCLUDE[T_QuantizationMode.EqualWidth](Token\T_QuantizationMode.EqualWidth.md)]**
+-  
     
     data is binned into N equal\-width bins.
 For this mode, narameter “Number of bins” must be specified.
 
--   **[!INCLUDE[T_QuantizationMode.EqualWidthCustomStartAndStop](Token\T_QuantizationMode.EqualWidthCustomStartAndStop.md)]**
+-  
     
     For this mode, parameters  “First edge position”, “Bin width” and
 “Last edge position” must be specified.
 
--   **[!INCLUDE[T_QuantizationMode.CustomEdges](Token\T_QuantizationMode.CustomEdges.md)]**
+-  
     
     For this mode, a comma\-separated list of bin edges in sorted order must
 be specified.
@@ -77,7 +77,7 @@ whether the quantized columns become categorical variables.
 
 |Name|Type|Description|
 |--------|--------|---------------|
-|Dataset|[!INCLUDE[T_DataTable](Token\T_DataTable.md)]|Input dataset|
+|Dataset||Input dataset|
 |Binning function|Function|Select a predefined quantization function to apply|
 
 
@@ -86,7 +86,7 @@ whether the quantized columns become categorical variables.
 
 |Name|Type|Description|
 |--------|--------|---------------|
-|Quantized dataset|[!INCLUDE[T_DataTable](Token\T_DataTable.md)]|Dataset after quantization is applied|
+|Quantized dataset||Dataset after quantization is applied|
 
 </br>
 </br>
