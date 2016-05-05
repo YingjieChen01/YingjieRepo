@@ -6,7 +6,7 @@ Category: [Data Transformation\Filter](529B4991-8A7F-4E12-8F36-51F9FACA4383)
 
 
 ## Module Overview
-[!INCLUDE[M_ApplyFilter](Token\M_ApplyFilter.md)] returns a dataset in which the selected columns have been transformed by the specified filter.
+returns a dataset in which the selected columns have been transformed by the specified filter.
 
 
 ## Technical Notes
@@ -43,8 +43,8 @@ If a filter encounters a NaN or a missing value in the input dataset, the output
 
 |Name|Type|Description|
 |--------|--------|---------------|
-|Filter|[!INCLUDE[T_IFilter](Token\T_IFilter.md)]|Filter implementation|
-|Dataset|[!INCLUDE[T_DataTable](Token\T_DataTable.md)]|Input dataset|
+|Filter||Filter implementation|
+|Dataset||Input dataset|
 
 
 ## Module Parameters
@@ -60,22 +60,22 @@ If a filter encounters a NaN or a missing value in the input dataset, the output
 
 |Name|Type|Description|
 |--------|--------|---------------|
-|Results dataset|[!INCLUDE[T_DataTable](Token\T_DataTable.md)]|Output dataset|
+|Results dataset||Output dataset|
 
 
 ## See Also
-Reference [!INCLUDE[ProductName](Token\ProductName.md)] modules
+Reference  modules
 
 
 
 |Module|Description|
 |----------|---------------|
-|[!INCLUDE[M_FIRFilter](Token\M_FIRFilter.md)]|Create a finite impulse response (FIR) filter|
-|[!INCLUDE[M_IIRFilter](Token\M_IIRFilter.md)]|Create an infinite impulse response (IIR) filter|
-|[!INCLUDE[M_MedianFilter](Token\M_MedianFilter.md)]|Create a median filter|
-|[!INCLUDE[M_MovingAverageFilter](Token\M_MovingAverageFilter.md)]|Create a moving average filter|
-|[!INCLUDE[M_ThresholdFilter](Token\M_ThresholdFilter.md)]|Create a threshold filter|
-|[!INCLUDE[M_UserDefinedFilter](Token\M_UserDefinedFilter.md)]|Create a custom IIR or FIR filter|
+||Create a finite impulse response (FIR) filter|
+||Create an infinite impulse response (IIR) filter|
+||Create a median filter|
+||Create a moving average filter|
+||Create a threshold filter|
+||Create a custom IIR or FIR filter|
 
 </br>
 </br>
