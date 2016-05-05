@@ -6,7 +6,7 @@ Category: [Statistical Functions](8A248CBA-24AA-4779-AAD6-35D73A0A2340)
 
 
 ## Module Overview
-[!INCLUDE[M_ApplyMathOp](Token\M_ApplyMathOp.md)] returns a data table where elements of
+ returns a data table where elements of
   selected columns have been transformed by the specified operation.
   For unary operations, such as Abs(x), the operation is applied to each
   of elements. For binary operations, such as Subtract(x,y), two selections
@@ -53,7 +53,7 @@ For a categorical column the operation is applied not only to column data, but a
 
 |Name|Type|Description|
 |--------|--------|---------------|
-|Dataset|[!INCLUDE[T_DataTable](Token\T_DataTable.md)]|Input dataset|
+|Dataset||Input dataset|
 
 
 ## Module Parameters
@@ -92,7 +92,7 @@ For a categorical column the operation is applied not only to column data, but a
 
 |Name|Type|Description|
 |--------|--------|---------------|
-|Results dataset|[!INCLUDE[T_DataTable](Token\T_DataTable.md)]|Results dataset|
+|Results dataset||Results dataset|
 
 
 
