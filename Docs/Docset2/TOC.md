@@ -8,5 +8,5 @@
 ## [topic7](topic7.md)
 ## [topic9](topic9.md)
 # api swagger testing
-## [Rest_API_01](../RestAPI_01.md)
-## [Rest_API_02](../RestAPI_02.md)
+## [Rest_API_01](./RestAPI_01.md)
+## [Rest_API_02](./RestAPI_02.md)
