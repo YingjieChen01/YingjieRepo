@@ -74,5 +74,4 @@
          }
     ],
     "notification_subscribers": ["v-yichen@microsoft.com"],
-    "branches_to_filter": ["master"]
 }
