@@ -6,3 +6,10 @@
 # [HTMLSyntax](HTMLSyntax.md)  
 # [HTMLandMDSyntax](HTMLandMDSyntax.md)
 # [MarkdownExtension](MarkdownExtension.md)
+
+##[TestFiles]()
+###[TestAlert](TestAlert.md)
+###[TestCodeSnippet](TestCodeSnippet.md)
+###[TestImage](TestImage.md)
+###[TestVideo](TestVideo.md)
+###[TestTable](TestTable.md)

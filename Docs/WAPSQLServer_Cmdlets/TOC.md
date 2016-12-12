@@ -17,3 +17,10 @@
 # [Set-MgmtSvcSqlHostingServer](Set-MgmtSvcSqlHostingServer.md) 
 # [Set-MgmtSvcSqlResourcePoolTemplate](Set-MgmtSvcSqlResourcePoolTemplate.md) 
 # [Test-MgmtSvcSqlHostingServer](Test-MgmtSvcSqlHostingServer.md) 
+
+##[TestFiles]()
+###[TestAlert](TestAlert.md)
+###[TestCodeSnippet](TestCodeSnippet.md)
+###[TestImage](TestImage.md)
+###[TestVideo](TestVideo.md)
+###[TestTable](TestTable.md)

@@ -11,3 +11,10 @@
 ##[HtmlSyntax_Result](HtmlSyntax_Result.md)
 ##[HTMLSyntax_All](HTMLSyntax_All.md)
 ##[HTMLSyntax_prompt](HTMLSyntax_prompt.md)
+
+##[TestFiles]()
+###[TestAlert](TestAlert.md)
+###[TestCodeSnippet](TestCodeSnippet.md)
+###[TestImage](TestImage.md)
+###[TestVideo](TestVideo.md)
+###[TestTable](TestTable.md)
