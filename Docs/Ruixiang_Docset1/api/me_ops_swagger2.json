@@ -1,0 +1,758 @@
+﻿{
+    "swagger": "2.0",
+    "info": {
+        "title": "MeOps"
+    },
+    "paths": {
+        "/me": {
+            "get": {
+                "parameters": [
+                    {
+                        "in": "query",
+                        "description": "Specifies the version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "1.6"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK. Indicates success. The signed-in user is returned in the response body.",
+                        "examples": {
+                            "application/json": {
+                                "odata.metadata": "https://graph.windows.net/myorganization/$metadata#directoryObjects/Microsoft.DirectoryServices.User/@Element",
+                                "odata.type": "Microsoft.DirectoryServices.User",
+                                "objectType": "User",
+                                "objectId": "13addec1-c5ae-47f5-a1fe-202be14b1570",
+                                "deletionTimestamp": null,
+                                "accountEnabled": true,
+                                "signInNames": [ ],
+                                "assignedLicenses": [
+                                    {
+                                        "disabledPlans": [ ],
+                                        "skuId": "6fd2c87f-b296-42f0-b197-1e91e994b900"
+                                    }
+                                ],
+                                "assignedPlans": [
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "exchange",
+                                        "servicePlanId": "efb87545-963c-4e0d-99df-69c6916d9eb0"
+                                    },
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "SharePoint",
+                                        "servicePlanId": "5dbe027f-2339-4123-9542-606e4d348a72"
+                                    },
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "SharePoint",
+                                        "servicePlanId": "e95bec33-7c88-4a70-8e19-b10bd9d0c014"
+                                    },
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "MicrosoftCommunicationsOnline",
+                                        "servicePlanId": "0feaeb32-d00e-4d66-bd5a-43b5b83db82c"
+                                    },
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "MicrosoftOffice",
+                                        "servicePlanId": "43de0ff5-c92c-492b-9116-175376d08c38"
+                                    },
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "RMSOnline",
+                                        "servicePlanId": "bea4c11e-220a-4e6d-8eb8-8ea15d019f90"
+                                    }
+                                ],
+                                "city": "Tulsa",
+                                "country": "United States",
+                                "creationType": null,
+                                "department": "Sales & Marketing",
+                                "dirSyncEnabled": null,
+                                "displayName": "Garth Fort",
+                                "facsimileTelephoneNumber": null,
+                                "givenName": "Garth",
+                                "immutableId": null,
+                                "jobTitle": "Web Marketing Manager",
+                                "lastDirSyncTime": null,
+                                "mail": "garthf@a830edad9050849NDA1.onmicrosoft.com",
+                                "mailNickname": "garthf",
+                                "mobile": null,
+                                "onPremisesSecurityIdentifier": null,
+                                "otherMails": [ ],
+                                "passwordPolicies": "None",
+                                "passwordProfile": null,
+                                "physicalDeliveryOfficeName": "20/1101",
+                                "postalCode": "74133",
+                                "preferredLanguage": "en-US",
+                                "provisionedPlans": [
+                                    {
+                                        "capabilityStatus": "Enabled",
+                                        "provisioningStatus": "Success",
+                                        "service": "exchange"
+                                    },
+                                    {
+                                        "capabilityStatus": "Enabled",
+                                        "provisioningStatus": "Success",
+                                        "service": "MicrosoftCommunicationsOnline"
+                                    },
+                                    {
+                                        "capabilityStatus": "Enabled",
+                                        "provisioningStatus": "Success",
+                                        "service": "SharePoint"
+                                    },
+                                    {
+                                        "capabilityStatus": "Enabled",
+                                        "provisioningStatus": "Success",
+                                        "service": "SharePoint"
+                                    },
+                                    {
+                                        "capabilityStatus": "Enabled",
+                                        "provisioningStatus": "Success",
+                                        "service": "MicrosoftOffice"
+                                    }
+                                ],
+                                "provisioningErrors": [ ],
+                                "proxyAddresses": [
+                                    "SMTP:garthf@a830edad9050849NDA1.onmicrosoft.com"
+                                ],
+                                "sipProxyAddress": "garthf@a830edad9050849NDA1.onmicrosoft.com",
+                                "state": "OK",
+                                "streetAddress": "7633 E. 63rd Place, Suite 300",
+                                "surname": "Fort",
+                                "telephoneNumber": "+1 918 555 0101",
+                                "usageLocation": "US",
+                                "userPrincipalName": "garthf@a830edad9050849NDA1.onmicrosoft.com",
+                                "userType": "Member"
+                            }
+                        }
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Read</i></b> or <b><i>Contacts.Write</i></b></p>",
+                "summary": "Gets the properties of the signed-in user.",
+                "operationId": "get me"
+            },
+            "patch": {
+                "parameters": [
+                    {
+                        "in": "query",
+                        "description": "Specifies the version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.",
+                        "name": "api-version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.6"
+                    },
+
+
+                    {
+                        "in": "body",
+                        "description": "this is request body, not real parameter",
+                        "name": "bodyparam",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/user",
+                            "example": {
+                                "department": "Sales",
+                                "usageLocation": "US"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content. Indicates success. No response body is returned.",
+                        "examples": {
+                            "application/json": "none"
+                        }
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Write</i></b></p>",
+                "summary": "Change the properties of the signed-in user.",
+                "operationId": "update me"
+            }
+        },
+        "/me/manager": {
+            "get": {
+                "parameters": [
+                    {
+                        "in": "query",
+                        "description": "Specifies the version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "1.6"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK. Indicates success. The signed-in user's manager is returned.",
+                        "examples": {
+                            "application/json": {
+                                "odata.metadata": "https://graph.windows.net/myorganization/$metadata#directoryObjects/Microsoft.DirectoryServices.User/@Element",
+                                "odata.type": "Microsoft.DirectoryServices.User",
+                                "objectType": "User",
+                                "objectId": "13addec1-c5ae-47f5-a1fe-202be14b1570",
+                                "deletionTimestamp": null,
+                                "accountEnabled": true,
+                                "signInNames": [ ],
+                                "assignedLicenses": [
+                                    {
+                                        "disabledPlans": [ ],
+                                        "skuId": "6fd2c87f-b296-42f0-b197-1e91e994b900"
+                                    }
+                                ],
+                                "assignedPlans": [
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "exchange",
+                                        "servicePlanId": "efb87545-963c-4e0d-99df-69c6916d9eb0"
+                                    },
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "SharePoint",
+                                        "servicePlanId": "5dbe027f-2339-4123-9542-606e4d348a72"
+                                    },
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "SharePoint",
+                                        "servicePlanId": "e95bec33-7c88-4a70-8e19-b10bd9d0c014"
+                                    },
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "MicrosoftCommunicationsOnline",
+                                        "servicePlanId": "0feaeb32-d00e-4d66-bd5a-43b5b83db82c"
+                                    },
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "MicrosoftOffice",
+                                        "servicePlanId": "43de0ff5-c92c-492b-9116-175376d08c38"
+                                    },
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "RMSOnline",
+                                        "servicePlanId": "bea4c11e-220a-4e6d-8eb8-8ea15d019f90"
+                                    }
+                                ],
+                                "city": "Tulsa",
+                                "country": "United States",
+                                "creationType": null,
+                                "department": "Sales & Marketing",
+                                "dirSyncEnabled": null,
+                                "displayName": "Garth Fort",
+                                "facsimileTelephoneNumber": null,
+                                "givenName": "Garth",
+                                "immutableId": null,
+                                "jobTitle": "Web Marketing Manager",
+                                "lastDirSyncTime": null,
+                                "mail": "garthf@a830edad9050849NDA1.onmicrosoft.com",
+                                "mailNickname": "garthf",
+                                "mobile": null,
+                                "onPremisesSecurityIdentifier": null,
+                                "otherMails": [ ],
+                                "passwordPolicies": "None",
+                                "passwordProfile": null,
+                                "physicalDeliveryOfficeName": "20/1101",
+                                "postalCode": "74133",
+                                "preferredLanguage": "en-US",
+                                "provisionedPlans": [
+                                    {
+                                        "capabilityStatus": "Enabled",
+                                        "provisioningStatus": "Success",
+                                        "service": "exchange"
+                                    },
+                                    {
+                                        "capabilityStatus": "Enabled",
+                                        "provisioningStatus": "Success",
+                                        "service": "MicrosoftCommunicationsOnline"
+                                    },
+                                    {
+                                        "capabilityStatus": "Enabled",
+                                        "provisioningStatus": "Success",
+                                        "service": "SharePoint"
+                                    },
+                                    {
+                                        "capabilityStatus": "Enabled",
+                                        "provisioningStatus": "Success",
+                                        "service": "SharePoint"
+                                    },
+                                    {
+                                        "capabilityStatus": "Enabled",
+                                        "provisioningStatus": "Success",
+                                        "service": "MicrosoftOffice"
+                                    }
+                                ],
+                                "provisioningErrors": [ ],
+                                "proxyAddresses": [
+                                    "SMTP:garthf@a830edad9050849NDA1.onmicrosoft.com"
+                                ],
+                                "sipProxyAddress": "garthf@a830edad9050849NDA1.onmicrosoft.com",
+                                "state": "OK",
+                                "streetAddress": "7633 E. 63rd Place, Suite 300",
+                                "surname": "Fort",
+                                "telephoneNumber": "+1 918 555 0101",
+                                "usageLocation": "US",
+                                "userPrincipalName": "garthf@a830edad9050849NDA1.onmicrosoft.com",
+                                "userType": "Member"
+                            }
+                        }
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Read</i></b> or <b><i>Contacts.Write</i></b></p>",
+                "summary": "Gets the signed-in user's manager object.",
+                "operationId": "get my manager object"
+
+            }
+        },
+        "/me/$links/manager": {
+            "get": {
+                "parameters": [
+                    {
+                        "in": "query",
+                        "description": "Specifies the version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.",
+                        "name": "api-version",
+                        "required": false,
+                        "type": "string",
+                        "default": "1.6"
+                    }
+
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK. Indicates success. A link to the signed-in user's manager is returned.",
+                        "examples": {
+                            "application/json": {
+                                "odata.metadata": "https://graph.windows.net/myorganization/$metadata#directoryObjects/$links/manager",
+                                "url": "https://graph.windows.net/myorganization/directoryObjects/fabeb27a-0481-4a80-b43e-a5c02c125874/Microsoft.WindowsAzure.ActiveDirectory.User"
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found. The requested resource was not found. This could be due to a bad domain, a bad user ID, or can occur if the manager property is not currently set for the specified user.",
+                        "examples": {
+                            "application/json": {
+                                "odata.error": {
+                                    "code": "Request_ResourceNotFound",
+                                    "message": {
+                                        "lang": "en",
+                                        "value": "Resource not found for the segment 'manager'."
+                                    }
+                                }
+                            }
+                        }
+                    },
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Read</i></b> or <b><i>Contacts.Write</i></b></p>",
+                "summary": "Get a link to the user's manager.",
+                "operationId": "get my manager link"
+            },
+            "put": {
+                "parameters": [
+                    {
+                        "in": "query",
+                        "description": "Specifies the version of the Graph API to target. Beginning with version 1.5, the api-version string is represented in major.minor format. Prior releases were represented as date strings: '2013-11-08' and '2013-04-05'. Required.",
+                        "name": "api-version",
+                        "required": true,
+                        "type": "string",
+                        "default": "1.6"
+                    },
+
+                    {
+                        "in": "body",
+                        "description": "The request body contains a single property that specifies the URL of the user to add as manager.",
+                        "name": "bodyparam",
+                        "required": true,
+                        "schema": {
+                            "required": [ "url" ],
+                            "properties": {
+                                "url": {
+                                    "type": "string"
+                                }
+                            },
+                            "example": {
+                                "url": "https://graph.windows.net/contoso.onmicrosoft.com/directoryObjects/fabeb27a-0481-4a80-b43e-a5c02c125874"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content. Indicates success. No response body is returned.",
+                        "examples": {
+                            "application/json": "none"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found. The requested resource was not found. For exmaple, this could be due to a bad domain.",
+                        "examples": {
+                            "application/json": {
+                                "odata.error": {
+                                    "code": "Request_ResourceNotFound",
+                                    "message": {
+                                        "lang": "en",
+                                        "value": "Resource not found for the segment 'manager'."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "description": "<p><i>Required scope</i>: <b><i>Contacts.Write</i></b></p>",
+                "summary": "Assigns a user or contact as the signed-in user's manager.",
+                "operationId": "set my manager"
+            }
+
+        }
+    },
+    "host": "graph.windows.net",
+    "schemes": [ "https" ],
+    "definitions": {
+        "user": {
+            "required": [
+                "accountEnabled",
+                "displayName",
+                "passwordProfile"
+            ],
+            "properties": {
+                "objectType": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "objectId": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "deletionTimestamp": {
+                    "type": "date-time",
+                    "readOnly": "true"
+                },
+                "accountEnabled": {
+                    "type": "boolean"
+                },
+                "assignedLicenses": {
+                    "schema": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/definitions/AssignedLicense",
+                            "example": {
+                                "assignedLicenses": [
+                                    {
+                                        "disabledPlans": [ ],
+                                        "skuId": "6fd2c87f-b296-42f0-b197-1e91e994b900"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "assignedPlans": {
+                    "schema": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/definitions/AssignedPlan",
+                            "example": {
+                                "assignedPlans": [
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "exchange",
+                                        "servicePlanId": "efb87545-963c-4e0d-99df-69c6916d9eb0"
+                                    },
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "SharePoint",
+                                        "servicePlanId": "5dbe027f-2339-4123-9542-606e4d348a72"
+                                    },
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "SharePoint",
+                                        "servicePlanId": "e95bec33-7c88-4a70-8e19-b10bd9d0c014"
+                                    },
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "MicrosoftCommunicationsOnline",
+                                        "servicePlanId": "0feaeb32-d00e-4d66-bd5a-43b5b83db82c"
+                                    },
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "MicrosoftOffice",
+                                        "servicePlanId": "43de0ff5-c92c-492b-9116-175376d08c38"
+                                    },
+                                    {
+                                        "assignedTimestamp": "2014-10-14T02:54:04Z",
+                                        "capabilityStatus": "Enabled",
+                                        "service": "RMSOnline",
+                                        "servicePlanId": "bea4c11e-220a-4e6d-8eb8-8ea15d019f90"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "city": {
+                    "type": "string"
+                },
+                "country": {
+                    "type": "string"
+                },
+                "department": {
+                    "type": "string"
+                },
+                "dirSyncEnabled": {
+                    "type": "boolean"
+                },
+                "displayName": {
+                    "type": "string",
+                    "required": "true"
+                },
+                "facsimileTelephoneNumber": {
+                    "type": "string"
+                },
+                "givenName": {
+                    "type": "string"
+                },
+                "immutableId": {
+                    "type": "string"
+                },
+                "jobTitle": {
+                    "type": "string"
+                },
+                "lastDirSyncTime": {
+                    "type": "date-time",
+                    "readOnly": "true"
+                },
+                "mail": {
+                    "type": "string"
+                },
+                "mailNickname": {
+                    "type": "string"
+                },
+                "mobile": {
+                    "type": "string"
+                },
+                "onPremisesSecurityIdentifier": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "otherMails": {
+                    "schema": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "passwordPolicies": {
+                    "type": "string"
+                },
+                "passwordProfile": {
+                    "schema": {
+                        "$ref": "#/definitions/PasswordProfile"
+                    },
+                    "required": "true",
+                    "example": {
+                        "passwordProfile": {
+                            "password": "StrongPassword1!"
+                        }
+                    }
+                },
+                "physicalDeliveryOfficeName": {
+                    "type": "string"
+                },
+                "postalCode": {
+                    "type": "string"
+                },
+                "preferredLanguage": {
+                    "type": "string"
+                },
+                "provisionedPlans": {
+                    "type": "array",
+                    "items": {
+                        "schema": {
+                            "$ref": "#/definitions/ProvisionedPlan"
+                        }
+                    },
+                    "readOnly": "true",
+                    "example": {
+                        "provisionedPlans": [
+                            {
+                                "capabilityStatus": "Enabled",
+                                "provisioningStatus": "Success",
+                                "service": "exchange"
+                            },
+                            {
+                                "capabilityStatus": "Enabled",
+                                "provisioningStatus": "Success",
+                                "service": "MicrosoftCommunicationsOnline"
+                            },
+                            {
+                                "capabilityStatus": "Enabled",
+                                "provisioningStatus": "Success",
+                                "service": "SharePoint"
+                            },
+                            {
+                                "capabilityStatus": "Enabled",
+                                "provisioningStatus": "Success",
+                                "service": "SharePoint"
+                            },
+                            {
+                                "capabilityStatus": "Enabled",
+                                "provisioningStatus": "Success",
+                                "service": "MicrosoftOffice"
+                            }
+                        ]
+                    }
+
+                },
+                "provisioningErrors": {
+                    "type": "array",
+                    "items": {
+                        "schema": {
+                            "$ref": "#/definitions/ProvisioningError"
+                        }
+                    },
+                    "readOnly": "true"
+
+                },
+                "proxyAddresses": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "readOnly": "true",
+                    "example": {
+                        "proxyAddresses": [
+                            "SMTP:garthf@a830edad9050849NDA1.onmicrosoft.com"
+                        ]
+                    }
+                },
+                "sipProxyAddress": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "streetAddress": {
+                    "type": "string"
+                },
+                "surname": {
+                    "type": "string"
+                },
+                "telephoneNumber": {
+                    "type": "string"
+                },
+                "usageLocation": {
+                    "type": "string"
+                },
+                "userPrincipalName": {
+                    "type": "string",
+                    "required": "true"
+                },
+                "userType": {
+                    "type": "string"
+                }
+            }
+        },
+        "AssignedLicense": {
+            "properties": {
+                "disabledPlans": {
+                    "type": "array",
+                    "items": {
+                        "type": "guid"
+                    },
+                    "readOnly": "true"
+                },
+                "skuId": {
+                    "type": "guid",
+                    "readOnly": "true"
+                }
+
+            }
+        },
+        "AssignedPlan": {
+            "properties": {
+                "assignedTimeStamp": {
+                    "type": "date-time",
+                    "readOnly": "true"
+                },
+                "capabilityStatus": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "service": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "servicePlanId": {
+                    "type": "guid",
+                    "readOnly": "true"
+                }
+            }
+        },
+        "PasswordProfile": {
+            "properties": {
+                "password": {
+                    "type": "string",
+                    "required": "true"
+                },
+                "forceChangePasswordNextLogin": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "ProvisionedPlan": {
+            "properties": {
+                "capabilityStatus": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "provisioningStatus": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "service": {
+                    "type": "string",
+                    "readOnly": "true"
+                }
+            }
+        },
+        "ProvisioningError": {
+            "properties": {
+                "errorDetail": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "resolved": {
+                    "type": "boolean",
+                    "readOnly": "true"
+                },
+                "serviceInstance": {
+                    "type": "string",
+                    "readOnly": "true"
+                },
+                "timestamp": {
+                    "type": "date-time",
+                    "readOnly": "true"
+                }
+            }
+        }
+    }
+}
