@@ -7,7 +7,7 @@
             "build_output_subfolder": "Docs/Docset1",
             "locale": "en-us",
             "version": 0,
-            "open_to_public_contributors": "false",
+            "open_to_public_contributors": "true",
             "type_mapping": {
                 "Conceptual": "Content"
             }
@@ -15,56 +15,6 @@
         {
             "docset_name": "Docset2",
             "build_output_subfolder": "Docs/Docset2",
-            "locale": "en-us",
-            "version": 0,
-            "open_to_public_contributors": "false",
-            "type_mapping": {
-                "Conceptual": "Content"
-            }
-        },
-        {
-            "docset_name": "Ruixiang_Docset1",
-            "build_output_subfolder": "Docs/Ruixiang_Docset1",
-            "locale": "en-us",
-            "version": 0,
-            "open_to_public_contributors": "false",
-            "type_mapping": {
-                "Conceptual": "Content"
-            }
-        },
-        {
-            "docset_name": "SmokeTesting",
-            "build_output_subfolder": "Docs/SmokeTesting",
-            "locale": "en-us",
-            "version": 0,
-            "open_to_public_contributors": "false",
-            "type_mapping": {
-                "Conceptual": "Content"
-            }
-        },
-        {
-            "docset_name": "Docset_OlinaTest",
-            "build_output_subfolder": "Docs/Docset_OlinaTest",
-            "locale": "en-us",
-            "version": 0,
-            "open_to_public_contributors": "false",
-            "type_mapping": {
-                "Conceptual": "Content"
-            }
-        },
-         {
-            "docset_name": "PSITPro5_Management",
-            "build_output_subfolder": "Docs/PSITPro5_Management",
-            "locale": "en-us",
-            "version": 0,
-            "open_to_public_contributors": "false",
-            "type_mapping": {
-                "Conceptual": "Content"
-            }
-         },
-         {
-            "docset_name": "WAPSQLServer_Cmdlets",
-            "build_output_subfolder": "Docs/WAPSQLServer_Cmdlets",
             "locale": "en-us",
             "version": 0,
             "open_to_public_contributors": "false",
