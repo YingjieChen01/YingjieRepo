@@ -1,0 +1,59 @@
+﻿{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "_artifactsLocation": {
+      "type": "string",
+      "metadata": {
+        "description": "Auto-generated container in staging storage account to receive post-build staging folder upload"
+      }
+    },
+    "_artifactsLocationSasToken": {
+      "type": "securestring",
+      "metadata": {
+        "description": "Auto-generated token to access _artifactsLocation"
+      }
+    },
+    "virtualMachineName": {
+      "type": "string",
+      "defaultValue": "CATS180321091"
+    }
+  },
+  "variables": {
+    "ConfigRunnerArchiveFolder": "DSC",
+    "ConfigRunnerArchiveFileName": "ConfigRunner.zip"
+  },
+  "resources": [
+    {
+      "name": "[concat(parameters('virtualMachineName'), '/', 'Microsoft.Powershell.DSC')]",
+      "type": "Microsoft.Compute/virtualMachines/extensions",
+      "location": "westcentralus",
+      "apiVersion": "2016-03-30",
+      "dependsOn": [ ],
+      "tags": {
+        "displayName": "ConfigRunner"
+      },
+      "properties": {
+        "publisher": "Microsoft.Powershell",
+        "type": "DSC",
+        "typeHandlerVersion": "2.9",
+        "autoUpgradeMinorVersion": true,
+        "settings": {
+          "configuration": {
+            "url": "[concat(parameters('_artifactsLocation'), '/', variables('ConfigRunnerArchiveFileName'))]",
+            "script": "ConfigRunner.ps1",
+            "function": "Main"
+          },
+          "configurationArguments": {
+            "nodeName": "[parameters('virtualMachineName')]"
+          }
+        },
+        "protectedSettings": {
+          "configurationUrlSasToken": "[parameters('_artifactsLocationSasToken')]"
+        }
+      }
+    }
+  ],
+  "outputs": {
+  }
+}
